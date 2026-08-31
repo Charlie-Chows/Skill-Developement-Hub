@@ -1,0 +1,121 @@
+/* Global CSS - Utility & Reusable Design System Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-main: #f8fafc;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(224, 231, 255, 0.6) 0%, rgba(243, 232, 255, 0.5) 40%, rgba(253, 242, 248, 0.6) 80%);
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --primary-coral: #ff6b6b;
+  --primary-gradient: linear-gradient(135deg, #ff8a00, #e52e71);
+  --accent-pink: #f472b6;
+  --accent-purple: #c084fc;
+  --accent-blue: #60a5fa;
+  --accent-amber: #fbbf24;
+
+  /* Card & Glassmorphic variables */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f6f8fd;
+  color: var(--text-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Global Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #ea580c;
+  box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(234, 88, 12, 0.35);
+  background: #fffdfc;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.btn-outline:hover {
+  border-color: #f97316;
+  color: #c2410c;
+  transform: translateY(-2px);
+}
+
+/* Common Typography & Badge Utility */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+}
+
+/* Glassmorphic Panel Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--glass-shadow);
+}
+
+/* Flex Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
