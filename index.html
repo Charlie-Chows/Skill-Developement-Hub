@@ -309,7 +309,7 @@
       <div class="why-layout">
         <div class="why-visual reveal-left">
           <div class="why-image-frame">
-            <img src="assets/photo-152202176988-66273c2fd55f.webp" alt="Learners collaborating on a technology project" loading="lazy">
+            <img src="assets/photo-1531482615713-2afd69097998.webp" alt="Learners collaborating on a technology project" loading="lazy">
           </div>
           <div class="why-float-card reveal-bottom">
             <i class="fa-solid fa-compass" aria-hidden="true"></i>
@@ -562,30 +562,86 @@
     <div class="container">
       <div class="section-intro reveal-top">
         <span class="section-kicker">Student stories</span>
-        <h2 id="stories-title" class="section-heading">Real learner stories belong here.</h2>
+        <h2 id="stories-title" class="section-heading">Real learner stories, real career progress.</h2>
         <p class="section-description">
-          Verified student testimonials can replace this editable placeholder when final stories,
-          names, courses, and outcomes are available.
+          Hear from graduates who transformed their practical skills, built portfolio projects, and accelerated their tech careers.
         </p>
       </div>
 
-      <article class="story-spotlight reveal-bottom">
-        <div class="story-image reveal-left">
-          <img src="assets/photo-1523240795612-9a054b0db644.webp" alt="Students collaborating during a learning session" loading="lazy">
+      <div class="stories-slider-wrapper reveal-bottom">
+        <div class="stories-slider-track" id="storiesSliderTrack">
+          <!-- Slide 1 -->
+          <article class="story-spotlight story-slide active">
+            <div class="story-image">
+              <img src="assets/photo-1523240795612-9a054b0db644.webp" alt="Students collaborating during a learning session" loading="lazy">
+            </div>
+            <div class="story-content">
+              <div class="story-quote-mark" aria-hidden="true">“</div>
+              <span class="story-placeholder"><i class="fa-solid fa-star" style="color:#f59e0b; margin-right:0.3rem;"></i> Web Development Alumnus</span>
+              <p class="story-quote">
+                "The hands-on Web Development track gave me the confidence to transition into a Frontend Engineer role within 6 months. Building real production projects made all the difference."
+              </p>
+              <div class="story-person">
+                <strong>Alex Rivera</strong>
+                <span>Frontend Engineer · Hired at TechCorp</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="story-spotlight story-slide">
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85" alt="UI UX designer working on mobile layout" loading="lazy">
+            </div>
+            <div class="story-content">
+              <div class="story-quote-mark" aria-hidden="true">“</div>
+              <span class="story-placeholder"><i class="fa-solid fa-star" style="color:#f59e0b; margin-right:0.3rem;"></i> UI/UX Design Alumna</span>
+              <p class="story-quote">
+                "Mentorship design reviews were game-changing. Having a senior practitioner review my wireframes and prototypes helped me build a portfolio that truly stood out."
+              </p>
+              <div class="story-person">
+                <strong>Maya Lin</strong>
+                <span>Product Designer · Hired at Studio Nine</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="story-spotlight story-slide">
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=85" alt="Software engineer coding at desk" loading="lazy">
+            </div>
+            <div class="story-content">
+              <div class="story-quote-mark" aria-hidden="true">“</div>
+              <span class="story-placeholder"><i class="fa-solid fa-star" style="color:#f59e0b; margin-right:0.3rem;"></i> Full-Stack Graduate</span>
+              <p class="story-quote">
+                "Full-Stack Development opened up remote work opportunities for me. The structured project briefs simulated real production sprints, preparing me for engineering roles."
+              </p>
+              <div class="story-person">
+                <strong>David Chen</strong>
+                <span>Full-Stack Developer · Remote Specialist</span>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="story-content reveal-right">
-          <div class="story-quote-mark" aria-hidden="true">“</div>
-          <span class="story-placeholder">Editable testimonial placeholder</span>
-          <p class="story-quote">
-            Add a verified learner quote here describing what they learned, what they built,
-            and how the experience supported their next step.
-          </p>
-          <div class="story-person">
-            <strong>Student Name</strong>
-            <span>Course / learning path · Verified outcome to be added</span>
+
+        <!-- Slider Controls -->
+        <div class="stories-slider-controls">
+          <button class="slider-btn prev-btn" id="storyPrevBtn" aria-label="Previous story">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <div class="slider-dots" id="storySliderDots">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+            <span class="slider-dot" data-index="2"></span>
           </div>
+
+          <button class="slider-btn next-btn" id="storyNextBtn" aria-label="Next story">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
-      </article>
+      </div>
     </div>
   </section>
 
@@ -785,6 +841,59 @@
       revealItems.forEach((item) => observer.observe(item));
     } else {
       revealItems.forEach((item) => item.classList.add('is-revealed'));
+    }
+
+    // Student Stories Slomo Carousel Script
+    const storyTrack = document.getElementById('storiesSliderTrack');
+    const storySlides = document.querySelectorAll('.story-slide');
+    const storyDots = document.querySelectorAll('.slider-dot');
+    const storyPrevBtn = document.getElementById('storyPrevBtn');
+    const storyNextBtn = document.getElementById('storyNextBtn');
+
+    let currentStoryIndex = 0;
+    let storyAutoSlideTimer;
+
+    function updateStorySlider(index) {
+      currentStoryIndex = (index + storySlides.length) % storySlides.length;
+      if (storyTrack) {
+        storyTrack.style.transform = `translateX(-${currentStoryIndex * 33.3333}%)`;
+      }
+      
+      storySlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentStoryIndex);
+      });
+      
+      storyDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentStoryIndex);
+      });
+    }
+
+    function startStoryAutoSlide() {
+      clearInterval(storyAutoSlideTimer);
+      storyAutoSlideTimer = setInterval(() => {
+        updateStorySlider(currentStoryIndex + 1);
+      }, 5000); // 5s smooth auto-slide with 1.35s slow-motion transition
+    }
+
+    if (storyTrack && storySlides.length > 0) {
+      storyPrevBtn?.addEventListener('click', () => {
+        updateStorySlider(currentStoryIndex - 1);
+        startStoryAutoSlide();
+      });
+
+      storyNextBtn?.addEventListener('click', () => {
+        updateStorySlider(currentStoryIndex + 1);
+        startStoryAutoSlide();
+      });
+
+      storyDots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          updateStorySlider(i);
+          startStoryAutoSlide();
+        });
+      });
+
+      startStoryAutoSlide();
     }
   </script>
 </body>

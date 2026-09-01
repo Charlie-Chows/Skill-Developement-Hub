@@ -984,12 +984,14 @@ img[src*="logo_trimmed"] {
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0,0,0,0.12);
   aspect-ratio: 1.1;
+  background: #f1f5f9;
 }
 
 .why-image-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .why-float-card {
@@ -1305,7 +1307,33 @@ img[src*="logo_trimmed"] {
   margin-top: 0.25rem;
 }
 
-/* Section 8: Student Stories */
+/* Slow-Motion (Slomo) Sliding Animation for Student Stories Carousel */
+.stories-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.stories-slider-track {
+  display: flex;
+  width: 300%;
+  transition: transform 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.story-slide {
+  width: 33.3333%;
+  flex-shrink: 0;
+  opacity: 0.35;
+  transform: scale(0.97);
+  transition: opacity 1.35s cubic-bezier(0.22, 1, 0.36, 1), transform 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .story-spotlight {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1315,7 +1343,59 @@ img[src*="logo_trimmed"] {
   overflow: hidden;
   border: 1px solid #e2e8f0;
   box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  align-items: stretch;
+}
+
+.stories-slider-controls {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slider-btn:hover {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slider-dot.active {
+  width: 28px;
+  background: #ea580c;
 }
 
 .story-image img {
