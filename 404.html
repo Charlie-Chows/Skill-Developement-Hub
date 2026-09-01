@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Skill Development Hub</title>
+  <meta name="description" content="The page you are looking for does not exist or has been moved. Return home or go back.">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+    }
+
+    /* Page Container */
+    .not-found-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Glowing Orbs */
+    .orb-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .orb-1 { width: 420px; height: 420px; background: #ff8a00; top: 10%; left: 15%; }
+    .orb-2 { width: 380px; height: 380px; background: #e52e71; bottom: 10%; right: 15%; }
+
+    .not-found-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 2rem;
+      padding: 4rem 3rem;
+      max-width: 680px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-code {
+      font-size: clamp(5rem, 12vw, 8.5rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #ff8a00, #e52e71);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .error-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .error-desc {
+      font-size: 1.05rem;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.9rem 2rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #ff8a00, #e52e71);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 10px 25px -5px rgba(229, 46, 113, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-back-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(229, 46, 113, 0.45);
+    }
+
+    .btn-go-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.9rem 2rem;
+      border-radius: 9999px;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.25s ease;
+    }
+
+    .btn-go-back:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    /* Floating UI Element */
+    .floating-ui-badge {
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      background: #ffffff;
+      padding: 0.85rem 1.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .floating-ui-badge i {
+      color: #ea580c;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 640px) {
+      .not-found-card { padding: 3rem 1.5rem; }
+      .actions-row { flex-direction: column; width: 100%; }
+      .btn-back-home, .btn-go-back { width: 100%; justify-content: center; }
+      .floating-ui-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-brand">
+        <img src="assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+      <div class="nav-right-group">
+        <a href="index.html" class="btn btn-primary login-header-btn">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Main Workspace -->
+  <main class="not-found-wrapper">
+    <div class="orb-glow orb-1"></div>
+    <div class="orb-glow orb-2"></div>
+
+    <div class="not-found-card" id="card404">
+      <div class="floating-ui-badge">
+        <i class="fa-solid fa-compass"></i> Lost in Code?
+      </div>
+
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">
+        The page or learning resource you are looking for doesn't exist, has been removed, or is currently undergoing curriculum updates.
+      </p>
+
+      <div class="actions-row">
+        <a href="index.html" class="btn-back-home">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+        <button class="btn-go-back" id="goBackBtn">
+          <i class="fa-solid fa-arrow-left"></i> Go Back
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Go Back handler
+      document.getElementById('goBackBtn').addEventListener('click', () => {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+
+      // Subtle GSAP entrance
+      if (window.gsap) {
+        gsap.from('#card404', {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out'
+        });
+      }
+    });
+  </script>
+</body>
+</html>

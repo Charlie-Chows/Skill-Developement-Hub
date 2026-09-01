@@ -1,0 +1,7 @@
+/* Signup Page Specific Styles */
+@import url('./login.css');
+
+/* Custom tweaks if any for signup page */
+.auth-card.signup-card {
+  max-width: 500px;
+}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Courses - Skill Development Center</title>
+    <meta name="description"
+        content="Explore practical technology courses, learning paths, projects, and career support at Skill Development Center.">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="services-page">
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo-brand">
+          <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+        </a>
+        <div class="nav-right-group">
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <div class="mobile-menu-header">
+              <a href="../index.html" class="logo-brand">
+                <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+              </a>
+              <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link active">Services</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-only-btn"><a href="login.html" class="btn btn-outline nav-btn">Login</a></li>
+          </ul>
+
+          <a href="login.html" class="btn btn-primary login-header-btn">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <!-- 1. Courses Hero -->
+        <section class="services-section services-hero" aria-labelledby="servicesHeroTitle">
+            <div class="container services-hero-grid">
+                <div class="services-hero-copy">
+                    <span class="services-eyebrow reveal-top"><i class="fa-solid fa-sparkles"></i> Learn by building</span>
+                    <h1 id="servicesHeroTitle" class="reveal-left">Skills that turn <span>learning into progress.</span></h1>
+                    <p class="reveal-right">Choose a focused learning path, practice with real-world projects, and build the confidence to
+                        take your next step in tech.</p>
+                    <div class="services-hero-actions reveal-bottom">
+                        <a href="../404.html" class="btn btn-primary">Explore Programs <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../404.html" class="services-text-link">Browse learning paths <i
+                                class="fa-solid fa-angle-down"></i></a>
+                    </div>
+                    <div class="hero-proof-row reveal-left" aria-label="Course highlights">
+                        <span><i class="fa-solid fa-laptop-code"></i> Project-based</span>
+                        <span><i class="fa-solid fa-user-tie"></i> Mentor-led</span>
+                        <span><i class="fa-solid fa-route"></i> Career-focused</span>
+                    </div>
+                </div>
+                <div class="services-hero-visual reveal-right">
+                    <div class="hero-orb hero-orb-a"></div>
+                    <div class="hero-orb hero-orb-b"></div>
+                    <div class="hero-image-card reveal-scale">
+                        <img src="../assets/woman.webp" alt="Learner developing technology skills on a laptop" loading="eager">
+                    </div>
+                    <div class="floating-course-card float-one reveal-left"><span class="mini-icon"><i
+                                class="fa-solid fa-code"></i></span>
+                        <div><strong>Build & ship</strong><small>Portfolio-ready work</small></div>
+                    </div>
+                    <div class="floating-course-card float-two reveal-right"><span class="mini-icon purple"><i
+                                class="fa-solid fa-graduation-cap"></i></span>
+                        <div><strong>Learn with purpose</strong><small>Skills mapped to roles</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Course Categories -->
+        <section class="services-section categories-section" id="categories" aria-labelledby="categoriesTitle">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker reveal-top">Learning paths</span>
+                    <h2 id="categoriesTitle" class="reveal-left">Start where your career goals are.</h2>
+                    <p class="reveal-right">Pick a category and develop the practical foundation you need to move forward.</p>
+                </div>
+                <div class="category-grid">
+                    <a class="category-card category-featured reveal-left" href="../404.html">
+                        <div class="category-image"><img src="../assets/web_dev.webp" alt="Developer working on web development"
+                                loading="lazy"><span>Popular path</span></div>
+                        <div class="category-content">
+                            <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>Web Development</h3>
+                            <p>Build responsive interfaces and modern web experiences from the ground up.</p>
+                            
+                            <div class="skill-pills" style="margin-top: 1.25rem; margin-bottom: 1.25rem;">
+                                <span>HTML5/CSS3</span><span>JavaScript ES6+</span><span>React.js</span><span>REST APIs</span>
+                            </div>
+
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: #475569; font-weight: 600;">
+                                <li><i class="fa-solid fa-circle-check" style="color: #ea580c; margin-right: 0.4rem;"></i> 12 Hands-on Portfolio Projects</li>
+                                <li><i class="fa-solid fa-circle-check" style="color: #ea580c; margin-right: 0.4rem;"></i> 1-on-1 Senior Mentor Code Reviews</li>
+                                <li><i class="fa-solid fa-circle-check" style="color: #ea580c; margin-right: 0.4rem;"></i> Industry-Recognized Verified Certificate</li>
+                            </ul>
+
+                            <span class="category-link">View curriculum <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="category-card reveal-top" href="../404.html">
+                        <div class="category-image"><img src="../assets/ui_ux.webp" alt="UI UX design workspace" loading="lazy">
+                        </div>
+                        <div class="category-content">
+                            <div class="category-icon pink"><i class="fa-solid fa-pen-ruler"></i></div>
+                            <h3>UI/UX Design</h3>
+                            <p>Turn user needs into clear, useful, and polished digital experiences.</p><span
+                                class="category-link">View curriculum <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="category-card reveal-right" href="../404.html">
+                        <div class="category-image"><img
+                                src="../assets/photo-1522071820081-009f0129c71c.webp"
+                                alt="Team collaborating during a leadership session" loading="lazy"></div>
+                        <div class="category-content">
+                            <div class="category-icon purple"><i class="fa-solid fa-people-group"></i></div>
+                            <h3>Leadership</h3>
+                            <p>Strengthen communication, ownership, collaboration, and decision-making skills.</p><span
+                                class="category-link">View curriculum <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="category-card category-text-card reveal-bottom" href="../404.html" style="text-decoration: none;">
+                        <div class="category-icon amber"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Connect frontend, backend, APIs, databases, deployment, and product thinking.</p>
+                        <div class="skill-pills">
+                            <span>Frontend</span><span>Backend</span><span>APIs</span><span>Cloud</span></div>
+                        <span class="category-link" style="margin-top: 1rem; display: inline-block;">View curriculum <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Featured Programs -->
+        <section class="services-section featured-section" id="featured-programs" aria-labelledby="featuredTitle">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div class="reveal-left"><span class="section-kicker">Featured programs</span>
+                        <h2 id="featuredTitle">Focused courses. Useful outcomes.</h2>
+                    </div>
+                    <p class="reveal-right">Every program is designed around skills you can demonstrate, not just topics you can memorize.
+                    </p>
+                </div>
+                <div class="program-grid">
+                    <article class="program-card featured-program reveal-left">
+                        <div class="program-image"><img src="../assets/web_dev.webp" alt="Web development course project"
+                                loading="lazy"><span class="level-badge">Beginner <i class="fa-solid fa-arrow-right" style="font-size: 0.75em; margin: 0 0.2rem;"></i> Intermediate</span></div>
+                        <div class="program-body">
+                            <div class="program-meta"><span><i class="fa-regular fa-clock"></i> Course
+                                     duration</span><span><i class="fa-solid fa-bolt"></i> Hands-on</span></div>
+                            <h3>Modern Web Development</h3>
+                            <p>Learn HTML, CSS, JavaScript, React, responsive design, and practical development
+                                workflows.</p>
+                            <div class="program-skills"><span>HTML/CSS</span><span>JavaScript</span><span>React</span>
+                            </div><a href="../404.html" class="program-link">Explore course <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal-bottom">
+                        <div class="program-image"><img src="../assets/ui_ux.webp" alt="UI UX design course project"
+                                loading="lazy"><span class="level-badge">Beginner <i class="fa-solid fa-arrow-right" style="font-size: 0.75em; margin: 0 0.2rem;"></i> Intermediate</span></div>
+                        <div class="program-body">
+                            <div class="program-meta"><span><i class="fa-regular fa-clock"></i> Course
+                                     duration</span><span><i class="fa-solid fa-pen-ruler"></i> Portfolio</span></div>
+                            <h3>UI/UX Design Foundations</h3>
+                            <p>Move from user research and wireframes to visual systems, prototypes, and polished
+                                interfaces.</p>
+                            <div class="program-skills"><span>Research</span><span>Figma</span><span>Prototyping</span>
+                            </div><a href="../404.html" class="program-link">Explore course <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal-right">
+                        <div class="program-abstract"><i class="fa-solid fa-people-arrows"></i><span>Leadership &
+                                collaboration</span></div>
+                        <div class="program-body">
+                            <div class="program-meta"><span><i class="fa-regular fa-clock"></i> Course
+                                     duration</span><span><i class="fa-solid fa-comments"></i> Practical</span></div>
+                            <h3>Leadership for Modern Teams</h3>
+                            <p>Practice communication, feedback, ownership, prioritization, and collaborative problem
+                                solving.</p>
+                            <div class="program-skills">
+                                <span>Communication</span><span>Ownership</span><span>Teamwork</span></div><a
+                                href="../404.html" class="program-link">Explore course <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Curriculum / Course Detail -->
+        <section class="services-section curriculum-section" id="curriculum" aria-labelledby="curriculumTitle">
+            <div class="container curriculum-layout">
+                <div class="curriculum-copy">
+                    <span class="section-kicker reveal-top">How the curriculum works</span>
+                    <h2 id="curriculumTitle" class="reveal-left">Learn in a sequence that feels like real work.</h2>
+                    <p class="reveal-right">Each learning path moves from fundamentals to guided practice, then into projects where you
+                        combine the skills.</p>
+                    <div class="curriculum-list">
+                        <div class="curriculum-step reveal-left"><span>01</span>
+                            <div>
+                                <h3>Understand</h3>
+                                <p>Build the concepts and vocabulary you need to work confidently.</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-step reveal-right"><span>02</span>
+                            <div>
+                                <h3>Practice</h3>
+                                <p>Apply each concept through focused exercises and mentor guidance.</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-step reveal-bottom"><span>03</span>
+                            <div>
+                                <h3>Build</h3>
+                                <p>Combine skills into practical projects that can become portfolio evidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="curriculum-board reveal-right">
+                    <div class="board-top"><span>Learning roadmap</span><i class="fa-solid fa-ellipsis"></i></div>
+                    <div class="roadmap-track">
+                        <div class="roadmap-item done"><span><i class="fa-solid fa-check"></i></span>
+                            <div><strong>Core foundations</strong><small>Concepts & tools</small></div>
+                        </div>
+                        <div class="roadmap-line"></div>
+                        <div class="roadmap-item current"><span>2</span>
+                            <div><strong>Guided practice</strong><small>Exercises & feedback</small></div>
+                        </div>
+                        <div class="roadmap-line"></div>
+                        <div class="roadmap-item"><span>3</span>
+                            <div><strong>Project build</strong><small>Portfolio evidence</small></div>
+                        </div>
+                    </div>
+                    <div class="board-footer"><span><i class="fa-solid fa-circle-info"></i> Course
+                            duration</span><strong>Customizable</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Learning Benefits -->
+        <section class="services-section benefits-section" aria-labelledby="benefitsTitle">
+            <div class="container">
+                <div class="section-heading centered">
+                    <span class="section-kicker reveal-top">Learning benefits</span>
+                    <h2 id="benefitsTitle" class="reveal-bottom">More than lessons on a screen.</h2>
+                    <p class="reveal-right">A practical learning environment designed to help you keep moving when the work gets difficult.
+                    </p>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit-card reveal-left">
+                        <div class="benefit-number">01</div><i class="fa-solid fa-user-group"></i>
+                        <h3>Mentor guidance</h3>
+                        <p>Get direction when you are stuck and feedback that helps you improve.</p>
+                    </article>
+                    <article class="benefit-card reveal-top">
+                        <div class="benefit-number">02</div><i class="fa-solid fa-laptop-code"></i>
+                        <h3>Hands-on practice</h3>
+                        <p>Spend time building and solving instead of only watching explanations.</p>
+                    </article>
+                    <article class="benefit-card reveal-bottom">
+                        <div class="benefit-number">03</div><i class="fa-solid fa-folder-open"></i>
+                        <h3>Portfolio evidence</h3>
+                        <p>Turn learning into tangible work that gives you something useful to discuss.</p>
+                    </article>
+                    <article class="benefit-card reveal-right">
+                        <div class="benefit-number">04</div><i class="fa-solid fa-route"></i>
+                        <h3>Clear progression</h3>
+                        <p>Follow a structured path so you know what to learn next and why.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Practical Projects -->
+        <section class="services-section projects-section" aria-labelledby="projectsTitle">
+            <div class="container projects-layout">
+                <div class="project-collage reveal-left">
+                    <div class="project-main"><img src="../assets/web_dev.webp" alt="Developer building a web project"
+                            loading="lazy">
+                        <div class="project-label"><span>Project brief</span><strong>Build a responsive product
+                                experience</strong></div>
+                    </div>
+                    <div class="project-small"><img src="../assets/ui_ux.webp" alt="Designer preparing a user interface"
+                            loading="lazy"></div>
+                    <div class="code-snippet"><span>&lt;build&gt;</span><strong>Learn <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.8em;"></i> Practice <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.8em;"></i>
+                            Ship</strong><span>&lt;/build&gt;</span></div>
+                </div>
+                <div class="projects-copy">
+                    <span class="section-kicker reveal-top">Practical projects</span>
+                    <h2 id="projectsTitle" class="reveal-right">The project is where the learning sticks.</h2>
+                    <p class="reveal-left">Projects bring multiple concepts together. You learn to make decisions, debug problems, explain
+                        your work, and iterate.</p>
+                    <ul class="project-points">
+                        <li class="reveal-right"><i class="fa-solid fa-check"></i><span><strong>Realistic briefs</strong> — Work from
+                                problems that feel closer to product development.</span></li>
+                        <li class="reveal-left"><i class="fa-solid fa-check"></i><span><strong>Review loops</strong> — Improve your work
+                                with structured feedback.</span></li>
+                        <li class="reveal-right"><i class="fa-solid fa-check"></i><span><strong>Showcase-ready</strong> — Present the
+                                thinking behind what you built.</span></li>
+                    </ul><a href="../404.html" class="btn btn-primary reveal-bottom">Start building <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Career Support -->
+        <section class="services-section career-section" aria-labelledby="careerTitle">
+            <div class="container career-layout">
+                <div class="career-copy">
+                    <span class="section-kicker reveal-top">Career support</span>
+                    <h2 id="careerTitle" class="reveal-left">Turn skills into a stronger career story.</h2>
+                    <p class="reveal-right">Learning is only one part of the journey. Use your projects and practice to prepare for the
+                        conversations that come next.</p>
+                    <div class="career-grid">
+                        <div class="reveal-left"><i class="fa-solid fa-file-lines"></i>
+                            <h3>Portfolio guidance</h3>
+                            <p>Shape your work into clear project stories.</p>
+                        </div>
+                        <div class="reveal-top"><i class="fa-solid fa-microphone"></i>
+                            <h3>Interview practice</h3>
+                            <p>Practice explaining technical decisions.</p>
+                        </div>
+                        <div class="reveal-bottom"><i class="fa-solid fa-compass"></i>
+                            <h3>Role direction</h3>
+                            <p>Connect your learning path to your goals.</p>
+                        </div>
+                        <div class="reveal-right"><i class="fa-solid fa-people-arrows"></i>
+                            <h3>Professional skills</h3>
+                            <p>Build communication and collaboration habits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="career-panel reveal-right">
+                    <div class="career-panel-glow"></div>
+                    <div class="career-panel-head"><span>Career readiness</span><i
+                            class="fa-solid fa-arrow-up-right-dots"></i></div>
+                    <div class="readiness-item">
+                        <div><span>Skills</span><strong>Build evidence</strong></div>
+                        <div class="readiness-bar"><span style="width:72%"></span></div>
+                    </div>
+                    <div class="readiness-item">
+                        <div><span>Projects</span><strong>Tell the story</strong></div>
+                        <div class="readiness-bar"><span style="width:58%"></span></div>
+                    </div>
+                    <div class="readiness-item">
+                        <div><span>Interviews</span><strong>Practice clearly</strong></div>
+                        <div class="readiness-bar"><span style="width:46%"></span></div>
+                    </div><small>Illustrative roadmap — customize to your own goals.</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA -->
+        <section class="services-section services-cta" aria-labelledby="ctaTitle">
+            <div class="container cta-inner">
+                <div class="cta-decoration"></div>
+                <div><span class="section-kicker reveal-top">Ready when you are</span>
+                    <h2 id="ctaTitle" class="reveal-left">Choose a path. Start building.</h2>
+                    <p class="reveal-right">Take the next practical step toward the skills you want to use at work.</p>
+                </div>
+                <div class="cta-actions reveal-bottom"><a href="../404.html" class="btn btn-primary">Create your account <i
+                            class="fa-solid fa-arrow-right"></i></a><a href="../404.html" class="cta-secondary">Talk to
+                        us</a></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col-brand">
+                    <a href="../index.html" class="footer-brand-logo">
+                        <img src="../assets/logo_trimmed.webp" alt="Stackly Logo">
+                    </a>
+                    <p class="footer-brand-desc">
+                        We resolve 60–80% of your customers' complex support issues via phone, email, and web, reducing your costs by over 50%
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="../404.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="../404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="../404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="../404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="../404.html">Leadership</a></li>
+                        <li><a href="../404.html">Customers</a></li>
+                        <li><a href="../404.html">Press</a></li>
+                        <li><a href="../404.html">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="../404.html">Privacy Policy</a></li>
+                        <li><a href="../404.html">Terms of Service</a></li>
+                        <li><a href="../404.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            <div class="footer-bottom-text">
+                &copy; 2026 Customer Support SaaS. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        (() => {
+            const navbar = document.querySelector('.navbar') || document.getElementById('servicesNavbar');
+            const openBtn = document.getElementById('mobileMenuBtn') || document.getElementById('servicesMobileOpen');
+            const closeBtn = document.getElementById('mobileCloseBtn') || document.getElementById('servicesMobileClose');
+            const menu = document.getElementById('navMenu') || document.getElementById('servicesNavMenu');
+            const links = menu ? menu.querySelectorAll('a') : [];
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            const closeMenu = () => { if (!menu) return; menu.classList.remove('open'); openBtn?.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; };
+            const openMenu = (e) => { e?.stopPropagation(); if (!menu) return; menu.classList.add('open'); openBtn?.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; };
+
+            openBtn?.addEventListener('click', openMenu);
+            closeBtn?.addEventListener('click', closeMenu);
+            links.forEach(link => link.addEventListener('click', closeMenu));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+            window.addEventListener('scroll', () => navbar?.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+
+            const revealElements = document.querySelectorAll('.reveal-up, .reveal-top, .reveal-bottom, .reveal-left, .reveal-right, .reveal-scale');
+            if (reduceMotion || !('IntersectionObserver' in window)) { 
+                revealElements.forEach(el => { el.classList.add('is-visible'); el.classList.add('is-revealed'); }); 
+                return; 
+            }
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { 
+                    if (entry.isIntersecting) { 
+                        entry.target.classList.add('is-visible'); 
+                        entry.target.classList.add('is-revealed'); 
+                        observer.unobserve(entry.target); 
+                    } 
+                }); 
+            }, { threshold: 0.1 });
+            revealElements.forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+</html>

@@ -750,3 +750,811 @@ img[src*="logo_trimmed"] {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   SECTIONS 2–10 & FOOTER STYLES
+   ========================================================================== */
+
+.home-section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.home-section--soft {
+  background: #f1f5f9;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ea580c;
+  margin-bottom: 0.75rem;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.section-description {
+  font-size: 1.05rem;
+  color: #64748b;
+  margin-top: 0.75rem;
+  max-width: 680px;
+}
+
+.section-intro {
+  margin-bottom: 3.5rem;
+}
+
+/* Reveal Animations */
+.reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up { transform: translateY(30px); }
+.reveal-left { transform: translateX(-30px); }
+.reveal-right { transform: translateX(30px); }
+
+.reveal-up.is-revealed,
+.reveal-left.is-revealed,
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Section 2: Trust / Outcomes */
+.trust-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.trust-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.trust-point {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.trust-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.trust-card {
+  background: #ffffff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-3px);
+}
+
+.trust-card i {
+  font-size: 1.5rem;
+  color: #ea580c;
+  margin-bottom: 0.75rem;
+}
+
+.trust-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.trust-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Section 3: Learning Paths */
+.learning-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.learning-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  background: #0f172a;
+  min-height: 280px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.learning-card.featured {
+  grid-column: span 2;
+}
+
+.learning-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+.learning-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.learning-card:hover img {
+  transform: scale(1.06);
+  opacity: 0.85;
+}
+
+.learning-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 70%, transparent 100%);
+  width: 100%;
+  color: #ffffff;
+}
+
+.learning-card-content span {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fdba74;
+}
+
+.learning-card-content h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 0.35rem;
+}
+
+.learning-card-content p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 0.35rem;
+}
+
+.learning-card-arrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.learning-card:hover .learning-card-arrow {
+  background: #ea580c;
+}
+
+/* Section 4: Why Learn With Us */
+.why-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.why-visual {
+  position: relative;
+}
+
+.why-image-frame {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+  aspect-ratio: 1.1;
+}
+
+.why-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.why-float-card {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border: 1px solid #f1f5f9;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.why-float-card i {
+  font-size: 1.5rem;
+  color: #ea580c;
+}
+
+.why-float-card strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.why-float-card span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.why-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.why-item-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffedd5;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.why-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.why-item p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+}
+
+/* Section 5: Real-World Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.75rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #0f172a;
+  text-decoration: none;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.2) 70%, transparent 100%);
+  width: 100%;
+  color: #ffffff;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-tags span {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.project-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.project-card.small {
+  min-height: 180px;
+}
+
+.project-card.small h3 {
+  font-size: 1.05rem;
+}
+
+/* Section 6: Mentors */
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.mentor-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 0.35s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-6px);
+}
+
+.mentor-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.mentor-card-info {
+  padding: 1.5rem;
+}
+
+.placeholder-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+
+.mentor-card-info h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.mentor-card-info p {
+  font-size: 0.88rem;
+  color: #ea580c;
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+
+.mentor-skills {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.mentor-skills span {
+  background: #f1f5f9;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Section 7: Student Journey */
+.journey-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.journey-sticky {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.journey-visual {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  margin-top: 1.5rem;
+}
+
+.journey-visual img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.journey-visual-overlay {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+  color: #ffffff;
+}
+
+.journey-visual-overlay strong {
+  display: block;
+  font-size: 0.95rem;
+
+}
+
+.journey-visual-overlay p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.journey-step {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+.journey-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ea580c;
+  line-height: 1;
+}
+
+.journey-step-content span {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.journey-step-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0.15rem;
+}
+
+.journey-step-content p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Section 8: Student Stories */
+.story-spotlight {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+  background: #ffffff;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  align-items: center;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 3rem;
+  position: relative;
+}
+
+.story-quote-mark {
+  font-size: 4rem;
+  line-height: 1;
+  color: #fdba74;
+  font-family: serif;
+
+}
+
+.story-placeholder {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ea580c;
+
+}
+
+.story-quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.story-person {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-person strong {
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.story-person span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Section 9: Career Outcomes */
+.outcomes-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.outcomes-note {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.outcomes-note i {
+  color: #ea580c;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.outcome-card {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+.outcome-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffedd5;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.outcome-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.outcome-card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* Section 10: Final CTA */
+.final-cta {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 2rem;
+  padding: 4rem 3.5rem;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta .section-heading {
+  color: #ffffff;
+}
+
+.final-cta .section-description {
+  color: #94a3b8;
+}
+
+.final-cta-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta-learning-ui {
+  position: relative;
+}
+
+.cta-ui-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+}
+
+.cta-ui-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fdba74;
+}
+
+.cta-progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.cta-progress span {
+  display: block;
+  height: 100%;
+  width: 75%;
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  border-radius: 9999px;
+}
+
+.cta-ui-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cta-ui-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.cta-ui-row i {
+  color: #4ade80;
+  font-size: 0.85rem;
+}
+
+/* Responsive queries for new sections */
+@media (max-width: 1024px) {
+  .trust-layout,
+  .why-layout,
+  .journey-layout,
+  .outcomes-layout,
+  .story-spotlight,
+  .final-cta {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .learning-paths-grid,
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learning-card.featured {
+    grid-column: span 2;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .learning-paths-grid,
+  .mentors-grid,
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-card.featured {
+    grid-column: span 1;
+  }
+}
+
+

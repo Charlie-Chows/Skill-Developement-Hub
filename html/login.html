@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Skill Development Hub</title>
+  <meta name="description" content="Sign in to your Skill Development Hub account to access your courses, projects, and career mentorship.">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- FontAwesome CDN for modern clean icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="auth-page">
+  <!-- Background Glow Decorations -->
+  <div class="auth-glow-orb auth-glow-1"></div>
+  <div class="auth-glow-orb auth-glow-2"></div>
+
+  <!-- Main Login Card Section -->
+  <main class="auth-main">
+    <div class="auth-card" id="loginCard">
+      <!-- Card Top Header Row -->
+      <div class="auth-card-top-bar">
+        <a href="../index.html" class="logo-brand">
+          <img src="../assets/logo_trimmed.webp" alt="Skill Development Hub Logo" class="auth-card-logo">
+        </a>
+        <a href="../index.html" class="auth-back-link">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+
+      <div class="auth-header">
+        <span class="auth-badge"><i class="fa-solid fa-right-to-bracket"></i> Welcome Back</span>
+        <h1 class="auth-title">Sign in to your account</h1>
+        <p class="auth-subtitle">Continue your skill development and project journey</p>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="loginForm" novalidate>
+        <!-- Email Input -->
+        <div class="form-group" id="emailGroup">
+          <label class="form-label" for="emailInput">Email Address</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input 
+              type="email" 
+              id="emailInput" 
+              class="form-input" 
+              placeholder="name@example.com"
+              autocomplete="off"
+              required
+            >
+          </div>
+          <span class="input-error-msg" id="emailError">Valid email address is required</span>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group" id="passwordGroup">
+          <div class="form-label">
+            <label for="passwordInput">Password</label>
+            <a href="../404.html" class="forgot-link">Forgot password?</a>
+          </div>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input 
+              type="password" 
+              id="passwordInput" 
+              class="form-input" 
+              placeholder="••••••••"
+              autocomplete="off"
+              required
+            >
+            <button type="button" class="password-toggle-btn" id="passwordToggleBtn" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye" id="passwordToggleIcon"></i>
+            </button>
+          </div>
+          <span class="input-error-msg" id="passwordError">Password is required</span>
+        </div>
+
+        <!-- Custom Role Dropdown (DIV/SPAN based - NO SELECT) -->
+        <div class="form-group" id="roleGroup">
+          <label class="form-label">Account Role</label>
+          <div class="custom-dropdown-container" id="customRoleDropdown">
+            <div 
+              class="custom-dropdown-trigger" 
+              id="dropdownTrigger" 
+              tabindex="0"
+              role="combobox"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-label="Select Account Role"
+            >
+              <i class="fa-solid fa-user-gear input-icon"></i>
+              <span class="dropdown-selected-text placeholder" id="selectedRoleText">Select Role...</span>
+              <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+            </div>
+
+            <div class="custom-dropdown-menu" id="dropdownMenu" role="listbox">
+              <div class="dropdown-option" data-value="User" role="option" tabindex="0">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>User (Learner)</span>
+              </div>
+              <div class="dropdown-option" data-value="Admin" role="option" tabindex="0">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Admin (Manager)</span>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" id="roleHiddenInput" name="role" value="">
+          <span class="input-error-msg" id="roleError">Please select an account role</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">
+          <span>Sign In</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <!-- Social Logins -->
+      <div class="auth-divider">
+        <span>Or sign in with</span>
+      </div>
+
+      <div class="social-grid">
+        <a href="../404.html" class="btn-social">
+          <i class="fa-brands fa-google" style="color: #ea4335;"></i>
+          <span>Google</span>
+        </a>
+        <a href="../404.html" class="btn-social">
+          <i class="fa-brands fa-github" style="color: #0f172a;"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <!-- Footer Link -->
+      <div class="auth-card-footer">
+        Don't have an account?
+        <a href="signup.html" class="auth-switch-link">Create Account</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="auth-simple-footer">
+    <div class="container">
+      &copy; 2026 Skill Development Hub. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Interactivity & Validation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // GSAP Entrance Animation
+      if (window.gsap) {
+        gsap.from('#loginCard', {
+          duration: 0.8,
+          y: 40,
+          opacity: 0,
+          ease: 'power3.out'
+        });
+      }
+
+      // Elements
+      const loginForm = document.getElementById('loginForm');
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const passwordToggleBtn = document.getElementById('passwordToggleBtn');
+      const passwordToggleIcon = document.getElementById('passwordToggleIcon');
+
+      const customRoleDropdown = document.getElementById('customRoleDropdown');
+      const dropdownTrigger = document.getElementById('dropdownTrigger');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      const selectedRoleText = document.getElementById('selectedRoleText');
+      const roleHiddenInput = document.getElementById('roleHiddenInput');
+      const dropdownOptions = document.querySelectorAll('.dropdown-option');
+
+      const emailGroup = document.getElementById('emailGroup');
+      const passwordGroup = document.getElementById('passwordGroup');
+      const roleGroup = document.getElementById('roleGroup');
+
+      // Password Eye Reveal Toggle
+      passwordToggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        passwordToggleIcon.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+      });
+
+      // Custom Dropdown Open/Close Logic
+      function openDropdown() {
+        customRoleDropdown.classList.add('open');
+        dropdownTrigger.setAttribute('aria-expanded', 'true');
+        if (window.gsap) {
+          gsap.to(dropdownMenu, { duration: 0.25, display: 'flex', opacity: 1, y: 0, ease: 'power2.out' });
+        } else {
+          dropdownMenu.style.display = 'flex';
+          dropdownMenu.style.opacity = '1';
+        }
+      }
+
+      function closeDropdown() {
+        customRoleDropdown.classList.remove('open');
+        dropdownTrigger.setAttribute('aria-expanded', 'false');
+        if (window.gsap) {
+          gsap.to(dropdownMenu, { 
+            duration: 0.2, 
+            opacity: 0, 
+            y: -8, 
+            ease: 'power2.in',
+            onComplete: () => { dropdownMenu.style.display = 'none'; }
+          });
+        } else {
+          dropdownMenu.style.display = 'none';
+        }
+      }
+
+      dropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = customRoleDropdown.classList.contains('open');
+        isOpen ? closeDropdown() : openDropdown();
+      });
+
+      dropdownTrigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          openDropdown();
+          if (dropdownOptions.length > 0) dropdownOptions[0].focus();
+        }
+      });
+
+      // Option Selection
+      dropdownOptions.forEach(option => {
+        const selectOption = () => {
+          const val = option.getAttribute('data-value');
+          const labelText = option.querySelector('span').textContent;
+
+          roleHiddenInput.value = val;
+          selectedRoleText.textContent = labelText;
+          selectedRoleText.classList.remove('placeholder');
+
+          dropdownOptions.forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+
+          roleGroup.classList.remove('has-error');
+          closeDropdown();
+          dropdownTrigger.focus();
+        };
+
+        option.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectOption();
+        });
+
+        option.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectOption();
+          } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const next = option.nextElementSibling;
+            if (next) next.focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const prev = option.previousElementSibling;
+            if (prev) prev.focus();
+          }
+        });
+      });
+
+      // Close dropdown on outside click or Escape
+      document.addEventListener('click', (e) => {
+        if (!customRoleDropdown.contains(e.target)) {
+          closeDropdown();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && customRoleDropdown.classList.contains('open')) {
+          closeDropdown();
+          dropdownTrigger.focus();
+        }
+      });
+
+      // Email Format Check
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // Input Reset Error on typing
+      emailInput.addEventListener('input', () => emailGroup.classList.remove('has-error'));
+      passwordInput.addEventListener('input', () => passwordGroup.classList.remove('has-error'));
+
+      // Form Submit & Validation
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+        const emailVal = emailInput.value.trim();
+        const passwordVal = passwordInput.value.trim();
+        const roleVal = roleHiddenInput.value;
+
+        // Email validation
+        if (!emailVal || !isValidEmail(emailVal)) {
+          emailGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          emailGroup.classList.remove('has-error');
+        }
+
+        // Password validation
+        if (!passwordVal) {
+          passwordGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          passwordGroup.classList.remove('has-error');
+        }
+
+        // Role validation
+        if (!roleVal) {
+          roleGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          roleGroup.classList.remove('has-error');
+        }
+
+        if (!isValid) {
+          return;
+        }
+
+        // Format username e.g. "johnDavis@gmail.com" -> "JohnDavis"
+        const emailLocal = emailVal.split('@')[0];
+        const formattedUsername = emailLocal.charAt(0).toUpperCase() + emailLocal.slice(1);
+
+        // Store non-sensitive user info for frontend dashboard demo display
+        localStorage.setItem('hub_user_email', emailVal);
+        localStorage.setItem('hub_username', formattedUsername);
+        localStorage.setItem('hub_user_role', roleVal);
+
+        // Redirect based on selected role
+        if (roleVal === 'Admin') {
+          window.location.href = 'admin.html';
+        } else {
+          window.location.href = 'user.html';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Skill Development Center</title>
+  <meta name="description" content="Learn about Skill Development Center, our mission, learning philosophy, teaching approach, mentors, and impact on technology careers.">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="about-page">
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo-brand">
+          <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+        </a>
+        <div class="nav-right-group">
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <div class="mobile-menu-header">
+              <a href="../index.html" class="logo-brand">
+                <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+              </a>
+              <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-only-btn"><a href="login.html" class="btn btn-outline nav-btn">Login</a></li>
+          </ul>
+
+          <a href="login.html" class="btn btn-primary login-header-btn">Login</a>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <!-- 1. About Hero -->
+    <section class="about-section about-hero" aria-labelledby="aboutHeroTitle">
+      <div class="about-orb about-orb-one"></div>
+      <div class="about-orb about-orb-two"></div>
+      <div class="container about-hero-grid">
+        <div class="about-hero-copy reveal-up">
+          <span class="about-eyebrow"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> About Skill Development Center</span>
+          <h1 id="aboutHeroTitle">Learning that turns <span>curiosity into capability.</span></h1>
+          <p>We create practical learning experiences for people who want to build modern technology skills, strengthen their portfolios, and move forward with confidence.</p>
+          <div class="about-hero-actions">
+            <a href="../404.html" class="btn btn-primary">Explore Learning Paths <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="../404.html" class="about-text-link">Discover our mission <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          </div>
+          <div class="about-hero-mini-stats" aria-label="Learning principles">
+            <span><i class="fa-solid fa-code" aria-hidden="true"></i> Build</span>
+            <span><i class="fa-solid fa-people-group" aria-hidden="true"></i> Learn together</span>
+            <span><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Grow careers</span>
+          </div>
+        </div>
+        <div class="about-hero-visual reveal-scale">
+          <div class="hero-image-frame">
+            <img src="../assets/woman.webp" alt="Learner developing technology skills with a laptop" fetchpriority="high">
+          </div>
+          <div class="hero-float-card hero-float-top">
+            <div class="float-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+            <div><strong>Learn by doing</strong><small>Practice-led education</small></div>
+          </div>
+          <div class="hero-float-card hero-float-bottom">
+            <span class="float-dot"></span>
+            <div><strong>Skills <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.25rem; font-size: 0.85em; opacity: 0.85;"></i> Projects <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.25rem; font-size: 0.85em; opacity: 0.85;"></i> Career</strong><small>A clear path from learning to application</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Mission -->
+    <section class="about-section mission-section" id="mission" aria-labelledby="missionTitle">
+      <div class="container mission-grid">
+        <div class="mission-visual reveal-left">
+          <div class="mission-main-image">
+            <img src="../assets/web_dev.webp" alt="Developer practicing web development skills" loading="lazy">
+          </div>
+          <div class="mission-note glass-panel">
+            <span class="mission-note-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
+            <div><strong>Our direction</strong><p>Make quality technology learning more practical, structured, and career-focused.</p></div>
+          </div>
+        </div>
+        <div class="mission-copy reveal-right">
+          <span class="section-kicker">02 / Mission</span>
+          <h2 id="missionTitle">Give learners a clearer way to become job-ready.</h2>
+          <p class="lead">Technology changes quickly. Our mission is to make the learning journey easier to navigate by connecting concepts with practice, projects, mentorship, and career preparation.</p>
+          <div class="mission-points">
+            <article><i class="fa-solid fa-layer-group" aria-hidden="true"></i><div><h3>Structured learning</h3><p>Progress through skills in a logical sequence instead of collecting disconnected tutorials.</p></div></article>
+            <article><i class="fa-solid fa-laptop-code" aria-hidden="true"></i><div><h3>Practical application</h3><p>Turn lessons into portfolio-worthy work through realistic assignments and projects.</p></div></article>
+            <article><i class="fa-solid fa-route" aria-hidden="true"></i><div><h3>Career direction</h3><p>Understand what to learn, what to build, and how to prepare for professional opportunities.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Our Story -->
+    <section class="about-section story-section" aria-labelledby="storyTitle">
+      <div class="container story-grid">
+        <div class="story-copy reveal-up">
+          <span class="section-kicker">03 / Our Story</span>
+          <h2 id="storyTitle">From learning resources to a learning experience.</h2>
+          <p>Skill Development Center is built around a simple observation: knowing what to study is only the beginning. Learners also need a way to practice, receive feedback, build evidence of their skills, and understand what comes next.</p>
+          <p>That idea shapes our approach across Web Development, Full-Stack Development, UI/UX Design, Data / AI, Leadership, and Career Development.</p>
+          <a href="../404.html" class="story-arrow-link">See what you can learn <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+        <div class="story-collage reveal-scale" aria-label="Learning environment collage">
+          <figure class="story-photo story-photo-large"><img src="../assets/ui_ux.webp" alt="UI/UX designer working on a digital product" loading="lazy"></figure>
+          <figure class="story-photo story-photo-small"><img src="../assets/photo-1516321318423-f06f85e504b3.webp" alt="Learners collaborating around a laptop" loading="lazy"></figure>
+          <div class="story-caption"><span>01</span><strong>Learn</strong><span>02</span><strong>Practice</strong><span>03</span><strong>Build</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Learning Philosophy -->
+    <section class="about-section philosophy-section" aria-labelledby="philosophyTitle">
+      <div class="container">
+        <div class="section-heading-centered reveal-up">
+          <span class="section-kicker">04 / Learning Philosophy</span>
+          <h2 id="philosophyTitle">Less passive watching. More meaningful progress.</h2>
+          <p>Our philosophy is centered on active learning: understand the idea, apply it, make something, review the result, and improve.</p>
+        </div>
+        <div class="philosophy-grid">
+          <article class="philosophy-card philosophy-card-feature reveal-up">
+            <div class="philosophy-number">01</div>
+            <div class="philosophy-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <h3>Understand the why</h3>
+            <p>Strong fundamentals help learners make better decisions when tools, frameworks, and requirements change.</p>
+            <div class="philosophy-line"></div>
+          </article>
+          <article class="philosophy-card reveal-up">
+            <div class="philosophy-number">02</div>
+            <div class="philosophy-icon"><i class="fa-solid fa-hammer" aria-hidden="true"></i></div>
+            <h3>Practice the skill</h3>
+            <p>Short exercises and focused assignments turn concepts into repeatable skills.</p>
+            <div class="philosophy-line"></div>
+          </article>
+          <article class="philosophy-card reveal-up">
+            <div class="philosophy-number">03</div>
+            <div class="philosophy-icon"><i class="fa-solid fa-cubes" aria-hidden="true"></i></div>
+            <h3>Build evidence</h3>
+            <p>Projects make learning visible and give learners something tangible to discuss in interviews.</p>
+            <div class="philosophy-line"></div>
+          </article>
+          <article class="philosophy-card reveal-up">
+            <div class="philosophy-number">04</div>
+            <div class="philosophy-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div>
+            <h3>Reflect and improve</h3>
+            <p>Feedback closes the loop so learners can identify gaps and keep progressing.</p>
+            <div class="philosophy-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Teaching Approach -->
+    <section class="about-section teaching-section" aria-labelledby="teachingTitle">
+      <div class="container teaching-grid">
+        <div class="teaching-visual reveal-left">
+          <div class="teaching-image"><img src="../assets/photo-1531482615713-2afd69097998.webp" alt="Mentor guiding learners during a collaborative technology workshop" loading="lazy"></div>
+          <div class="teaching-overlay-card glass-panel"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i><span>Concepts <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.85em;"></i> Practice <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.85em;"></i> Feedback <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.85em;"></i> Projects</span></div>
+        </div>
+        <div class="teaching-copy reveal-right">
+          <span class="section-kicker">05 / Teaching Approach</span>
+          <h2 id="teachingTitle">A learning loop designed around doing.</h2>
+          <p class="lead">Instead of treating a course as a collection of videos, we structure learning around a repeatable cycle that keeps learners engaged with the skill.</p>
+          <ol class="teaching-steps">
+            <li><span>01</span><div><h3>Concept</h3><p>Build a clear mental model before jumping into implementation.</p></div></li>
+            <li><span>02</span><div><h3>Guided practice</h3><p>Apply the concept with examples and focused exercises.</p></div></li>
+            <li><span>03</span><div><h3>Independent build</h3><p>Use the skill in a practical project with room for experimentation.</p></div></li>
+            <li><span>04</span><div><h3>Review</h3><p>Use feedback and reflection to strengthen the final result.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Mentors / Team -->
+    <section class="about-section mentors-section" aria-labelledby="mentorsTitle">
+      <div class="container">
+        <div class="section-heading-row reveal-up">
+          <div><span class="section-kicker">06 / Mentors & Team</span><h2 id="mentorsTitle">People who help turn questions into progress.</h2></div>
+          <p>Our mentor area is intentionally built for real instructor profiles. Replace the editable placeholders below with verified names, roles, expertise, and portraits.</p>
+        </div>
+        <div class="mentor-grid">
+          <article class="mentor-card mentor-feature reveal-up">
+            <div class="mentor-image"><img src="../assets/photo-1573496359142-b8d87734a5a2.webp" alt="Mentor profile placeholder" loading="lazy"><span class="mentor-status">Editable profile</span></div>
+            <div class="mentor-content"><span>Mentor / Instructor</span><h3>Mentor Name</h3><p>Replace with verified professional background and teaching expertise.</p><div class="skill-tags"><span>Web Development</span><span>Mentorship</span></div></div>
+          </article>
+          <article class="mentor-card reveal-up">
+            <div class="mentor-image"><img src="../assets/photo-1580489944761-15a19d654956.webp" alt="Instructor profile placeholder" loading="lazy"><span class="mentor-status">Editable profile</span></div>
+            <div class="mentor-content"><span>Instructor</span><h3>Instructor Name</h3><p>Replace with verified role and areas of expertise.</p><div class="skill-tags"><span>UI/UX</span><span>Product</span></div></div>
+          </article>
+          <article class="mentor-card reveal-up">
+            <div class="mentor-image"><img src="../assets/photo-1560250097-0b93528c311a.webp" alt="Career mentor profile placeholder" loading="lazy"><span class="mentor-status">Editable profile</span></div>
+            <div class="mentor-content"><span>Career Mentor</span><h3>Career Mentor Name</h3><p>Replace with verified career guidance experience.</p><div class="skill-tags"><span>Interview Prep</span><span>Careers</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Values / Impact -->
+    <section class="about-section values-section" aria-labelledby="valuesTitle">
+      <div class="container values-grid">
+        <div class="values-copy reveal-left">
+          <span class="section-kicker">07 / Values & Impact</span>
+          <h2 id="valuesTitle">Built around the learner, not the hype.</h2>
+          <p class="lead">We want every interaction to feel useful: clearer expectations, practical work, honest guidance, and a visible sense of progress.</p>
+          <div class="values-list">
+            <div><span class="value-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span><div><h3>Learner-first</h3><p>Design learning around real questions, constraints, and outcomes.</p></div></div>
+            <div><span class="value-icon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></span><div><h3>Honest guidance</h3><p>Keep claims, outcomes, and expectations grounded in supplied evidence.</p></div></div>
+            <div><span class="value-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span><div><h3>Progress over perfection</h3><p>Encourage consistent practice and iteration rather than waiting to feel ready.</p></div></div>
+          </div>
+        </div>
+        <div class="values-visual reveal-right">
+          <div class="impact-card impact-card-main"><img src="../assets/woman.webp" alt="Learner building confidence through technology education" loading="lazy"><div class="impact-caption"><span>Learning in action</span><strong>Build confidence through practice.</strong></div></div>
+          <div class="impact-card impact-card-side"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><strong>Meaningful progress</strong><span>Learn <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.8em;"></i> practice <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.8em;"></i> build <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.2rem; font-size: 0.8em;"></i> improve</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="about-section about-cta" aria-labelledby="aboutCtaTitle">
+      <div class="cta-glow cta-glow-one"></div><div class="cta-glow cta-glow-two"></div>
+      <div class="container cta-inner reveal-up">
+        <div class="cta-copy"><span class="about-eyebrow"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Your next step</span><h2 id="aboutCtaTitle">Ready to build your next skill?</h2><p>Explore the learning paths and choose a direction that matches where you want to go next.</p><div class="cta-actions">
+          <a href="../404.html" class="cta-secondary">Talk to us</a></div></div>
+        <div class="cta-visual"><img src="../assets/ui_ux.webp" alt="Designer building a digital product as part of a learning project" loading="lazy"><div class="cta-floating"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Start with one skill.</span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col-brand">
+          <a href="../index.html" class="footer-brand-logo">
+            <img src="../assets/logo_trimmed.webp" alt="Stackly Logo">
+          </a>
+          <p class="footer-brand-desc">
+            We resolve 60–80% of your customers' complex support issues via phone, email, and web, reducing your costs by over 50%
+          </p>
+          <div class="footer-social-icons">
+            <a href="../404.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="../404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="../404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="../404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="../404.html">Leadership</a></li>
+            <li><a href="../404.html">Customers</a></li>
+            <li><a href="../404.html">Press</a></li>
+            <li><a href="../404.html">Partners</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../404.html">Privacy Policy</a></li>
+            <li><a href="../404.html">Terms of Service</a></li>
+            <li><a href="../404.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+      <div class="footer-bottom-text">
+        &copy; 2026 Customer Support SaaS. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    (() => {
+      const nav = document.getElementById('navMenu') || document.getElementById('aboutNavMenu');
+      const openBtn = document.getElementById('mobileMenuBtn') || document.getElementById('aboutMobileOpen');
+      const closeBtn = document.getElementById('mobileCloseBtn') || document.getElementById('aboutMobileClose');
+      const navbar = document.querySelector('.navbar') || document.getElementById('aboutNavbar');
+      const navLinks = nav ? nav.querySelectorAll('.nav-link, .about-nav-link, .about-mobile-cta') : [];
+
+      const setMenu = (open) => {
+        if (!nav) return;
+        nav.classList.toggle('open', open);
+        if (openBtn) openBtn.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+      };
+
+      openBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setMenu(true);
+      });
+      closeBtn?.addEventListener('click', () => setMenu(false));
+      navLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+      window.addEventListener('scroll', () => navbar?.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+
+
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.about-hero-copy > *', { y: 26, opacity: 0, duration: 0.75, stagger: 0.08, ease: 'power3.out' });
+        gsap.from('.hero-image-frame', { scale: 0.94, opacity: 0, duration: 1, delay: 0.15, ease: 'power3.out' });
+        gsap.utils.toArray('.reveal-up').forEach(el => gsap.from(el, { y: 38, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 84%', once: true } }));
+        gsap.utils.toArray('.reveal-left').forEach(el => gsap.from(el, { x: -42, opacity: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 82%', once: true } }));
+        gsap.utils.toArray('.reveal-right').forEach(el => gsap.from(el, { x: 42, opacity: 0, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 82%', once: true } }));
+        gsap.utils.toArray('.reveal-scale').forEach(el => gsap.from(el, { scale: 0.94, opacity: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 84%', once: true } }));
+      } else {
+        document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-scale').forEach(el => el.classList.add('is-visible'));
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -20,7 +20,7 @@
     <header class="navbar">
       <div class="container">
         <a href="index.html" class="logo-brand">
-          <img src="logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+          <img src="assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
         </a>
         <div class="nav-right-group">
           <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
           <ul class="nav-menu" id="navMenu">
             <div class="mobile-menu-header">
               <a href="index.html" class="logo-brand">
-                <img src="logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+                <img src="assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
               </a>
               <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
                 <i class="fa-solid fa-xmark"></i>
@@ -54,33 +54,33 @@
       <div class="hero-content">
         
         <!-- Left Section: Headline, Enroll Button, Curriculum & Brand Logos -->
-        <div class="hero-left">
-          <div class="hero-header-box">
+        <div class="hero-left reveal-left">
+          <div class="hero-header-box reveal-top">
             <h1 class="main-title">Skill Development Center</h1>
-            <a href="html/signup.html" class="btn btn-primary">Enroll Now</a>
+            <a href="404.html" class="btn btn-primary">Enroll Now</a>
           </div>
 
           <!-- Curriculum Courses Row -->
-          <div class="curriculum-section">
+          <div class="curriculum-section reveal-bottom">
             <h3 class="section-label">Curriculum</h3>
             <div class="curriculum-grid">
-              <a href="html/services.html#web-dev" class="curriculum-card">
+              <a href="404.html" class="curriculum-card reveal-left">
                 <div class="curriculum-img-wrapper">
-                  <img src="web_dev.jpg" alt="Web Development Hands Coding">
+                  <img src="assets/web_dev.webp" alt="Web Development Hands Coding">
                 </div>
                 <span class="curriculum-card-title">Web Development</span>
               </a>
 
-              <a href="html/services.html#ui-ux" class="curriculum-card">
+              <a href="404.html" class="curriculum-card reveal-bottom">
                 <div class="curriculum-img-wrapper">
-                  <img src="ui_ux.jpg" alt="UI/UX Design Workspace">
+                  <img src="assets/ui_ux.webp" alt="UI/UX Design Workspace">
                 </div>
                 <span class="curriculum-card-title">UI/UX Design</span>
               </a>
 
-              <a href="html/services.html#leadership" class="curriculum-card">
+              <a href="404.html" class="curriculum-card reveal-right">
                 <div class="curriculum-img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Leadership Team Collaboration">
+                  <img src="assets/photo-1522071820081-009f0129c71c.webp" alt="Leadership Team Collaboration">
                 </div>
                 <span class="curriculum-card-title">Leadership</span>
               </a>
@@ -88,7 +88,7 @@
           </div>
 
           <!-- Associated Brands / Partners Logos -->
-          <div class="partners-row">
+          <div class="partners-row reveal-up">
             <div class="partner-logo partner-avast">
               <i class="fa-solid fa-shield-halved"></i> avast
             </div>
@@ -108,14 +108,14 @@
         </div>
 
         <!-- Right Section: Woman Portrait with Curved Gradient Arch & Overlay Banner -->
-        <div class="hero-right">
+        <div class="hero-right reveal-right">
           <div class="avatar-arch-container">
-            <div class="colorful-arch-bg">
-              <img src="woman.jpg" alt="Skill Development Student" class="woman-image">
+            <div class="colorful-arch-bg reveal-top">
+              <img src="assets/woman.webp" alt="Skill Development Student" class="woman-image">
             </div>
 
             <!-- Curved Colorful Wrap Ribbon Overlay -->
-            <div class="ribbon-wrap-overlay">
+            <div class="ribbon-wrap-overlay reveal-left">
               <div class="ribbon-badge">
                 <i class="fa-solid fa-star"></i> 4.9 Rating (12k+ Graduates)
               </div>
@@ -125,7 +125,7 @@
             </div>
 
             <!-- Floating Glassmorphic Mission Badge -->
-            <div class="mission-floating-card">
+            <div class="mission-floating-card reveal-right">
               <div class="mission-icons-row">
                 <div class="app-badge-icon icon-orange"><i class="fa-solid fa-e"></i></div>
                 <div class="app-badge-icon icon-green"><i class="fa-solid fa-shapes"></i></div>
@@ -142,7 +142,7 @@
       <section class="bottom-features-section">
         
         <!-- Left: Card Stacking (Full-Stack Web Development) -->
-        <div class="stacked-cards-container">
+        <div class="stacked-cards-container reveal-left">
           <div class="stacked-card stacked-card-1">
             <div class="card-preview-header"><i class="fa-solid fa-cloud"></i> Cloud Architecture</div>
           </div>
@@ -160,10 +160,10 @@
         </div>
 
         <!-- Right: Key Features List -->
-        <div class="features-list-wrapper">
-          <h2 class="features-main-heading">Features</h2>
+        <div class="features-list-wrapper reveal-right">
+          <h2 class="features-main-heading reveal-top">Features</h2>
 
-          <div class="feature-item-card">
+          <div class="feature-item-card reveal-right">
             <div class="feature-icon-box feat-icon-1">
               <i class="fa-solid fa-user-group"></i>
             </div>
@@ -173,7 +173,7 @@
             </div>
           </div>
 
-          <div class="feature-item-card">
+          <div class="feature-item-card reveal-left">
             <div class="feature-icon-box feat-icon-2">
               <i class="fa-solid fa-lightbulb"></i>
             </div>
@@ -183,7 +183,7 @@
             </div>
           </div>
 
-          <div class="feature-item-card">
+          <div class="feature-item-card reveal-right">
             <div class="feature-icon-box feat-icon-3">
               <i class="fa-solid fa-briefcase"></i>
             </div>
@@ -197,6 +197,538 @@
       </section>
     </main>
   </div>
+
+  <!-- Section 2: Trust / Outcomes -->
+  <section class="home-section trust-section home-section--soft" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="trust-layout">
+        <div class="trust-copy reveal-left">
+          <span class="section-kicker">Built for real progress</span>
+          <h2 id="trust-title" class="section-heading">Learn with a clear path from skill to career.</h2>
+          <p>
+            A practical learning experience centered on structured curriculum, real project work,
+            mentorship, and career preparation.
+          </p>
+          <div class="trust-points" aria-label="Learning strengths">
+            <span class="trust-point">Practical learning</span>
+            <span class="trust-point">Project focused</span>
+            <span class="trust-point">Mentor guidance</span>
+            <span class="trust-point">Career ready</span>
+          </div>
+        </div>
+
+        <div class="trust-rail reveal-right">
+          <article class="trust-card reveal-top">
+            <i class="fa-solid fa-route" aria-hidden="true"></i>
+            <h3>Structured Paths</h3>
+            <p>Follow a focused sequence instead of learning disconnected topics.</p>
+          </article>
+          <article class="trust-card reveal-bottom">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Hands-on Practice</h3>
+            <p>Turn concepts into portfolio-ready work through practical projects.</p>
+          </article>
+          <article class="trust-card reveal-top">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            <h3>Expert Guidance</h3>
+            <p>Get direction, feedback, and support as you build your skills.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Learning Paths -->
+  <section class="home-section learning-paths-section" aria-labelledby="paths-title">
+    <div class="container">
+      <div class="section-intro reveal-top">
+        <span class="section-kicker">Choose your direction</span>
+        <h2 id="paths-title" class="section-heading">Learning paths built around the skills that matter.</h2>
+        <p class="section-description">
+          Explore technology, design, leadership, and career-focused paths with an image-first learning experience.
+        </p>
+      </div>
+
+      <div class="learning-paths-grid">
+        <a href="404.html" class="learning-card featured reveal-left">
+          <img src="assets/web_dev.webp" alt="Developer learning web development on a laptop" loading="lazy">
+          <div class="learning-card-content">
+            <span>Technology</span>
+            <h3>Web Development</h3>
+            <p>Build modern interfaces and practical web experiences.</p>
+          </div>
+          <span class="learning-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="404.html" class="learning-card reveal-right">
+          <img src="assets/photo-1555066931-4365d14bab8c.webp" alt="Code editor showing a software development project" loading="lazy">
+          <div class="learning-card-content">
+            <span>Engineering</span>
+            <h3>Full-Stack Development</h3>
+            <p>Connect frontend, backend, APIs, and product thinking.</p>
+          </div>
+          <span class="learning-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="404.html" class="learning-card reveal-left">
+          <img src="assets/ui_ux.webp" alt="Designer working on a UI and UX project" loading="lazy">
+          <div class="learning-card-content">
+            <span>Design</span>
+            <h3>UI/UX Design</h3>
+            <p>Learn to turn ideas into useful, polished digital products.</p>
+          </div>
+          <span class="learning-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="404.html" class="learning-card reveal-bottom">
+          <img src="assets/photo-1551288049-bebda4e38f71.webp" alt="Data analytics dashboard displayed on a laptop" loading="lazy">
+          <div class="learning-card-content">
+            <span>Technology</span>
+            <h3>Data / AI</h3>
+            <p>Develop data-aware thinking for modern technology teams.</p>
+          </div>
+          <span class="learning-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="404.html" class="learning-card reveal-right">
+          <img src="assets/photo-1521737711867-e3b97375f902.webp" alt="Team collaborating around a table during a workshop" loading="lazy">
+          <div class="learning-card-content">
+            <span>Growth</span>
+            <h3>Leadership & Career</h3>
+            <p>Strengthen communication, collaboration, and career readiness.</p>
+          </div>
+          <span class="learning-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why Learn With Us -->
+  <section class="home-section why-section home-section--soft" aria-labelledby="why-title">
+    <div class="container">
+      <div class="why-layout">
+        <div class="why-visual reveal-left">
+          <div class="why-image-frame">
+            <img src="woman.jpg" alt="Learners collaborating on a technology project" loading="lazy">
+          </div>
+          <div class="why-float-card reveal-bottom">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            <strong>Learn with direction</strong>
+            <span>Connect learning, practice, projects, and career preparation.</span>
+          </div>
+        </div>
+
+        <div class="why-copy reveal-right">
+          <span class="section-kicker">Why learn with us</span>
+          <h2 id="why-title" class="section-heading reveal-top">A learning system designed around doing, not just watching.</h2>
+          <p class="section-description">
+            Build confidence through a combination of structured learning, practical assignments,
+            expert feedback, interview preparation, and industry-focused thinking.
+          </p>
+
+          <div class="why-list">
+            <article class="why-item reveal-right">
+              <div class="why-item-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+              <div>
+                <h3>Expert mentorship</h3>
+                <p>Get practical direction while you work through challenging topics.</p>
+              </div>
+            </article>
+            <article class="why-item reveal-left">
+              <div class="why-item-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+              <div>
+                <h3>Practical projects</h3>
+                <p>Apply what you learn by creating work that demonstrates your skills.</p>
+              </div>
+            </article>
+            <article class="why-item reveal-right">
+              <div class="why-item-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+              <div>
+                <h3>Structured curriculum</h3>
+                <p>Progress through concepts in an intentional order.</p>
+              </div>
+            </article>
+            <article class="why-item reveal-left">
+              <div class="why-item-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+              <div>
+                <h3>Career guidance</h3>
+                <p>Prepare your portfolio, communication, and interview approach.</p>
+              </div>
+            </article>
+            <article class="why-item reveal-right">
+              <div class="why-item-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div>
+              <div>
+                <h3>Industry-focused learning</h3>
+                <p>Focus on skills and workflows that translate into real product work.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Real-World Projects -->
+  <section class="home-section projects-section" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-intro reveal-top">
+        <span class="section-kicker">Build real things</span>
+        <h2 id="projects-title" class="section-heading">Your learning becomes visible through projects.</h2>
+        <p class="section-description">
+          Explore project-style learning that can become a stronger demonstration of your problem-solving,
+          design, and implementation skills.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card reveal-left" href="404.html">
+          <img src="assets/photo-1558655146-d09347e92766.webp" alt="Digital product interface being designed on a laptop" loading="lazy">
+          <div class="project-card-content">
+            <div class="project-tags">
+              <span>Featured project</span>
+              <span>Product UI</span>
+              <span>Intermediate</span>
+            </div>
+            <h3>Design and build a polished digital product experience.</h3>
+          </div>
+        </a>
+
+        <div class="project-stack">
+          <a class="project-card small reveal-right" href="404.html">
+            <img src="assets/photo-1461749280684-dccba630e2f6.webp" alt="Developer writing code for a software project" loading="lazy">
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span>Web</span>
+                <span>Code</span>
+              </div>
+              <h3>Build a responsive web application.</h3>
+            </div>
+          </a>
+
+          <a class="project-card small reveal-bottom" href="404.html">
+            <img src="assets/photo-1551434678-e076c223a692.webp" alt="Technology team collaborating on a project" loading="lazy">
+            <div class="project-card-content">
+              <div class="project-tags">
+                <span>Team</span>
+                <span>Product</span>
+              </div>
+              <h3>Practice collaboration and project delivery.</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Mentors -->
+  <section class="home-section mentors-section" aria-labelledby="mentors-title">
+    <div class="container">
+      <div class="mentors-header reveal-top">
+        <div class="section-intro">
+          <span class="section-kicker">Learn with guidance</span>
+          <h2 id="mentors-title" class="section-heading">Mentorship that keeps your learning moving.</h2>
+          <p class="section-description">
+            Mentor profiles below are intentionally editable placeholders until verified instructor
+            information is supplied.
+          </p>
+        </div>
+      </div>
+
+      <div class="mentors-grid">
+        <article class="mentor-card reveal-left">
+          <img src="assets/woman.webp" alt="Placeholder mentor portrait for the learning platform" loading="lazy">
+          <div class="mentor-card-info">
+            <span class="placeholder-label">Editable placeholder</span>
+            <h3>Mentor Profile</h3>
+            <p>Frontend & Product Development</p>
+            <div class="mentor-skills">
+              <span>JavaScript</span>
+              <span>Web</span>
+              <span>Projects</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="mentor-card reveal-bottom">
+          <img src="assets/photo-1573496359142-b8d87734a5a2.webp" alt="Placeholder mentor portrait for UI UX design" loading="lazy">
+          <div class="mentor-card-info">
+            <span class="placeholder-label">Editable placeholder</span>
+            <h3>Mentor Profile</h3>
+            <p>Design & Product Thinking</p>
+            <div class="mentor-skills">
+              <span>UI/UX</span>
+              <span>Research</span>
+              <span>Product</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="mentor-card reveal-right">
+          <img src="assets/photo-1519085360753-af0119f7cbe7.webp" alt="Placeholder mentor portrait for career advice" loading="lazy">
+          <div class="mentor-card-info">
+            <span class="placeholder-label">Editable placeholder</span>
+            <h3>Mentor Profile</h3>
+            <p>Career & Interview Preparation</p>
+            <div class="mentor-skills">
+              <span>Career</span>
+              <span>Interviews</span>
+              <span>Communication</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Student Journey -->
+  <section class="home-section journey-section" aria-labelledby="journey-title">
+    <div class="container">
+      <div class="journey-layout">
+        <div class="journey-sticky reveal-left">
+          <div class="section-intro">
+            <span class="section-kicker">Your learning journey</span>
+            <h2 id="journey-title" class="section-heading">Move from first step to career-ready work.</h2>
+            <p class="section-description">
+              The journey is designed around a simple progression: learn the fundamentals,
+              practice deliberately, build projects, prepare, and launch.
+            </p>
+          </div>
+
+          <div class="journey-visual reveal-top">
+            <img src="assets/photo-1531482615713-2afd69097998.webp" alt="Learners working together during a technology workshop" loading="lazy">
+            <div class="journey-visual-overlay">
+              <strong>Learn <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.3rem; font-size: 0.85em; opacity: 0.85;"></i> Practice <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.3rem; font-size: 0.85em; opacity: 0.85;"></i> Build <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.3rem; font-size: 0.85em; opacity: 0.85;"></i> Prepare <i class="fa-solid fa-arrow-right-long" style="margin: 0 0.3rem; font-size: 0.85em; opacity: 0.85;"></i> Launch</strong>
+              <p>A visual learning progression for every path.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-steps reveal-right">
+          <article class="journey-step reveal-right">
+            <div class="journey-number">01</div>
+            <div class="journey-step-content">
+              <span>Start</span>
+              <h3>Choose your path</h3>
+              <p>Identify the skills and learning direction that match your goals.</p>
+            </div>
+          </article>
+          <article class="journey-step reveal-left">
+            <div class="journey-number">02</div>
+            <div class="journey-step-content">
+              <span>Learn</span>
+              <h3>Build the foundation</h3>
+              <p>Work through structured concepts with a clear sequence and purpose.</p>
+            </div>
+          </article>
+          <article class="journey-step reveal-right">
+            <div class="journey-number">03</div>
+            <div class="journey-step-content">
+              <span>Practice</span>
+              <h3>Turn knowledge into skill</h3>
+              <p>Reinforce concepts with focused exercises and practical assignments.</p>
+            </div>
+          </article>
+          <article class="journey-step reveal-left">
+            <div class="journey-number">04</div>
+            <div class="journey-step-content">
+              <span>Build</span>
+              <h3>Create real projects</h3>
+              <p>Bring multiple skills together in portfolio-oriented project work.</p>
+            </div>
+          </article>
+          <article class="journey-step reveal-right">
+            <div class="journey-number">05</div>
+            <div class="journey-step-content">
+              <span>Prepare</span>
+              <h3>Get career ready</h3>
+              <p>Strengthen your portfolio, interview preparation, and communication.</p>
+            </div>
+          </article>
+          <article class="journey-step reveal-left">
+            <div class="journey-number">06</div>
+            <div class="journey-step-content">
+              <span>Launch</span>
+              <h3>Take the next step</h3>
+              <p>Use your new skills and project evidence to pursue your next opportunity.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Student Stories -->
+  <section class="home-section stories-section home-section--soft" aria-labelledby="stories-title">
+    <div class="container">
+      <div class="section-intro reveal-top">
+        <span class="section-kicker">Student stories</span>
+        <h2 id="stories-title" class="section-heading">Real learner stories belong here.</h2>
+        <p class="section-description">
+          Verified student testimonials can replace this editable placeholder when final stories,
+          names, courses, and outcomes are available.
+        </p>
+      </div>
+
+      <article class="story-spotlight reveal-bottom">
+        <div class="story-image reveal-left">
+          <img src="assets/photo-1523240795612-9a054b0db644.webp" alt="Students collaborating during a learning session" loading="lazy">
+        </div>
+        <div class="story-content reveal-right">
+          <div class="story-quote-mark" aria-hidden="true">“</div>
+          <span class="story-placeholder">Editable testimonial placeholder</span>
+          <p class="story-quote">
+            Add a verified learner quote here describing what they learned, what they built,
+            and how the experience supported their next step.
+          </p>
+          <div class="story-person">
+            <strong>Student Name</strong>
+            <span>Course / learning path · Verified outcome to be added</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section 9: Career Outcomes -->
+  <section class="home-section outcomes-section" aria-labelledby="outcomes-title">
+    <div class="container">
+      <div class="outcomes-layout">
+        <div class="outcomes-copy reveal-left">
+          <span class="section-kicker">Career outcomes</span>
+          <h2 id="outcomes-title" class="section-heading">Measure progress by what you can actually do.</h2>
+          <p class="section-description">
+            Instead of presenting unsupported statistics, this section focuses on meaningful outcomes
+            the platform is designed to help learners work toward.
+          </p>
+          <div class="outcomes-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Verified platform numbers can be added here later without changing the visual system.</span>
+          </div>
+        </div>
+
+        <div class="outcomes-grid">
+          <article class="outcome-card reveal-top">
+            <div class="outcome-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+            <h3>Practical Skills</h3>
+            <p>Develop technical and problem-solving skills through guided practice.</p>
+          </article>
+          <article class="outcome-card reveal-right">
+            <div class="outcome-icon"><i class="fa-solid fa-folder-open" aria-hidden="true"></i></div>
+            <h3>Portfolio Evidence</h3>
+            <p>Build project work that gives your skills a visible, practical context.</p>
+          </article>
+          <article class="outcome-card reveal-bottom">
+            <div class="outcome-icon"><i class="fa-solid fa-microphone" aria-hidden="true"></i></div>
+            <h3>Interview Readiness</h3>
+            <p>Prepare to explain your decisions, projects, and technical thinking clearly.</p>
+          </article>
+          <article class="outcome-card reveal-left">
+            <div class="outcome-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></div>
+            <h3>Professional Growth</h3>
+            <p>Continue learning with a structured approach to long-term development.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Final CTA -->
+  <section class="home-section final-cta-section" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="final-cta">
+        <div class="final-cta-content reveal-left">
+          <span class="section-kicker">Ready to begin?</span>
+          <h2 id="cta-title" class="section-heading">Build your next skill with a path that keeps you moving.</h2>
+          <p class="section-description">
+            Explore the learning paths, choose a direction, and start building practical skills
+            that can support your professional growth.
+          </p>
+          <div class="final-cta-actions">
+            <a href="404.html" class="btn btn-primary">Start Learning</a>
+            <a href="404.html" class="btn btn-outline">Explore Courses</a>
+          </div>
+        </div>
+
+        <div class="cta-learning-ui reveal-right" aria-hidden="true">
+          <div class="cta-ui-card">
+            <div class="cta-ui-top">
+              <span>Learning path</span>
+              <span>In progress</span>
+            </div>
+            <div class="cta-progress"><span></span></div>
+            <div class="cta-ui-list">
+              <div class="cta-ui-row"><i class="fa-solid fa-check"></i> Foundations</div>
+              <div class="cta-ui-row"><i class="fa-solid fa-check"></i> Practice</div>
+              <div class="cta-ui-row"><i class="fa-solid fa-code"></i> Project building</div>
+              <div class="cta-ui-row"><i class="fa-solid fa-rocket"></i> Career preparation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col-brand">
+          <a href="index.html" class="footer-brand-logo">
+            <img src="assets/logo_trimmed.webp" alt="Stackly Logo">
+          </a>
+          <p class="footer-brand-desc">
+            We resolve 60–80% of your customers' complex support issues via phone, email, and web, reducing your costs by over 50%
+          </p>
+          <div class="footer-social-icons">
+            <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/services.html">Services</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="html/blog.html">Blog</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Leadership</a></li>
+            <li><a href="404.html">Customers</a></li>
+            <li><a href="404.html">Press</a></li>
+            <li><a href="404.html">Partners</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">Terms of Service</a></li>
+            <li><a href="404.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+      <div class="footer-bottom-text">
+        &copy; 2026 Customer Support SaaS. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 
   <script>
     const navbar = document.querySelector('.navbar');
@@ -230,6 +762,30 @@
         document.body.style.overflow = '';
       });
     });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Reveal animations on scroll (Desktop & Mobile)
+    const revealItems = document.querySelectorAll('.reveal-up, .reveal-top, .reveal-bottom, .reveal-left, .reveal-right');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('is-revealed'));
+    }
   </script>
 </body>
 </html>

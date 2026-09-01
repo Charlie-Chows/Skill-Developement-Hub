@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights - Skill Development Center</title>
+  <meta name="description" content="Explore articles, guides, and career resources on Web Development, UI/UX Design, and tech career growth.">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="container">
+        <a href="../index.html" class="logo-brand">
+          <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+        </a>
+        <div class="nav-right-group">
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <div class="mobile-menu-header">
+              <a href="../index.html" class="logo-brand">
+                <img src="../assets/logo_trimmed.webp" alt="Stackly Logo" class="brand-logo-img">
+              </a>
+              <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-only-btn"><a href="login.html" class="btn btn-outline nav-btn">Login</a></li>
+          </ul>
+
+          <a href="login.html" class="btn btn-primary login-header-btn">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- SECTION 1: BLOG HERO -->
+      <section class="blog-hero">
+        <div class="blog-hero-content">
+          <span class="section-tag">Blog & Articles</span>
+          <h1 class="blog-hero-title">Insights, Tutorials & Career Guidance</h1>
+          <p class="blog-hero-desc">
+            Stay ahead with expert industry advice, actionable coding tutorials, UI/UX trends, and real-world career growth strategies.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: FEATURED ARTICLE -->
+      <section class="blog-section">
+        <div class="featured-card">
+          <div class="featured-img-box">
+            <img src="../assets/web_dev.webp" alt="Modern Web Development Trends">
+            <span class="featured-badge">Featured Story</span>
+          </div>
+          <div class="featured-info">
+            <div class="meta-row">
+              <span class="meta-tag">Web Development</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+            <h2 class="featured-title">
+              <a href="../404.html">The Future of Frontend Engineering in 2026: Architectures & AI Tools</a>
+            </h2>
+            <p class="featured-excerpt">
+              Explore how modern web development frameworks, component architectures, and AI pair programmers are reshaping how developers build high-performance applications.
+            </p>
+            <div class="author-box">
+              <img src="../assets/woman.webp" alt="Author Alex Rivera" class="author-avatar">
+              <div>
+                <div class="author-name">Alex Rivera</div>
+                <div class="author-role">Head of Curriculum</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CATEGORIES BAR -->
+      <section class="blog-section">
+        <div class="categories-pills">
+          <a href="../404.html" class="category-pill active">All Articles</a>
+          <a href="../404.html" class="category-pill">Web Development</a>
+          <a href="../404.html" class="category-pill">UI/UX Design</a>
+          <a href="../404.html" class="category-pill">Career Growth</a>
+          <a href="../404.html" class="category-pill">Leadership</a>
+          <a href="../404.html" class="category-pill">Industry Trends</a>
+        </div>
+      </section>
+
+      <!-- SECTION 4: LATEST ARTICLES -->
+      <section class="blog-section">
+        <div class="blog-section-header">
+          <h2 class="section-title">Latest Articles</h2>
+        </div>
+        <div class="articles-grid">
+          
+          <article class="article-card">
+            <img src="../assets/ui_ux.webp" alt="UI UX Design Principles" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">UI/UX Design</span>
+                <span>•</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">Mastering Design Systems: From Tokens to Scalable UI Components</a>
+              </h3>
+              <p class="article-desc">
+                Learn how to structure design tokens, spacing systems, and consistent visual styles that scale across large products.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../assets/web_dev.webp" alt="Full Stack Javascript" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">Engineering</span>
+                <span>•</span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">Building Production-Ready APIs with Node.js and Clean Architecture</a>
+              </h3>
+              <p class="article-desc">
+                Step-by-step best practices for organizing route logic, error handling, and robust database models.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../assets/photo-1522071820081-009f0129c71c.webp" alt="Tech Career Advice" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">Career</span>
+                <span>•</span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">How to Build a High-Impact Developer Portfolio That Gets Interviews</a>
+              </h3>
+              <p class="article-desc">
+                Key strategies for selecting real-world projects, framing project case studies, and standing out to hiring managers.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECTION 5: TECHNOLOGY & CAREER ARTICLES -->
+      <section class="blog-section">
+        <div class="blog-section-header">
+          <h2 class="section-title">Technology & Career Insights</h2>
+        </div>
+        <div class="articles-grid">
+          
+          <article class="article-card">
+            <img src="../assets/photo-1531403009284-440f080d1e12.webp" alt="Wireframing and Prototyping" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">UI/UX Design</span>
+                <span>•</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">Wireframing vs Rapid Prototyping: Which Method Fits Your Sprint?</a>
+              </h3>
+              <p class="article-desc">
+                Discover when to create low-fidelity wireframes and when interactive prototypes drive better user testing.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../assets/photo-1517245386807-bb43f82c33c4.webp" alt="Leadership in Tech" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">Leadership</span>
+                <span>•</span>
+                <span>7 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">Transitioning from Senior Developer to Tech Lead: Essential Mindset Shifts</a>
+              </h3>
+              <p class="article-desc">
+                Balancing individual contributor coding work with mentorship, sprint planning, and team communication.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../assets/photo-1551836022-d5d88e9218df.webp" alt="Remote Work Habits" class="article-img">
+            <div class="article-content">
+              <div class="meta-row">
+                <span class="meta-tag">Productivity</span>
+                <span>•</span>
+                <span>3 min read</span>
+              </div>
+              <h3 class="article-title">
+                <a href="../404.html">Daily Habits of Successful Self-Taught Developers</a>
+              </h3>
+              <p class="article-desc">
+                Consistent learning routines, project execution tactics, and community engagement for career changers.
+              </p>
+              <a href="../404.html" class="read-more-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECTION 6: LEARNING RESOURCES -->
+      <section class="blog-section">
+        <div class="blog-section-header" style="text-align: center;">
+          <span class="section-tag">Free Guides</span>
+          <h2 class="section-title">Downloadable Resources & Guides</h2>
+        </div>
+        <div class="resources-grid">
+          
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <h3>Frontend Roadmap 2026</h3>
+            <p>A step-by-step checklist of HTML, CSS, JavaScript, and tooling concepts for modern web engineering.</p>
+            <a href="../404.html" class="btn btn-outline" style="align-self: flex-start;">Download PDF</a>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h3>UI/UX Starter Kit</h3>
+            <p>Essential grid templates, typography scale guides, and component libraries for beginner designers.</p>
+            <a href="../404.html" class="btn btn-outline" style="align-self: flex-start;">Download Kit</a>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Tech Interview Playbook</h3>
+            <p>Proven interview preparation strategies, sample coding challenges, and portfolio presentation tips.</p>
+            <a href="../404.html" class="btn btn-outline" style="align-self: flex-start;">Download Playbook</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 7: NEWSLETTER -->
+      <section class="blog-section">
+        <div class="newsletter-box">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Subscribe to Weekly Tech Insights</h2>
+            <p class="newsletter-desc">Get curated tutorials, industry analysis, and career advice sent straight to your inbox once a week.</p>
+            <div class="newsletter-form-wrapper">
+              <form class="newsletter-form" id="newsletterForm" novalidate>
+                <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address">
+                <button type="submit" class="btn btn-primary" style="background: #ffffff; color: #ea580c; border: none; white-space: nowrap;">Subscribe</button>
+              </form>
+              <div class="newsletter-error-msg" id="newsletterError">
+                <i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: CTA SECTION -->
+      <section class="blog-section">
+        <div class="cta-banner">
+          <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
+          <p class="cta-desc">Transform your practical skills with industry mentorship, hands-on projects, and structured learning paths.</p>
+          <a href="../404.html" class="btn btn-primary" style="background: #ffffff; color: #ea580c; border: none;">Explore Courses</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-col-brand">
+            <a href="../index.html" class="footer-brand-logo">
+              <img src="../assets/logo_trimmed.webp" alt="Stackly Logo">
+            </a>
+            <p class="footer-brand-desc">
+              We resolve 60–80% of your customers' complex support issues via phone, email, and web, reducing your costs by over 50%
+            </p>
+            <div class="footer-social-icons">
+              <a href="../404.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="../404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="../404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="../404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Company</h4>
+            <ul class="footer-links">
+              <li><a href="../404.html">Leadership</a></li>
+              <li><a href="../404.html">Customers</a></li>
+              <li><a href="../404.html">Press</a></li>
+              <li><a href="../404.html">Partners</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Legal</h4>
+            <ul class="footer-links">
+              <li><a href="../404.html">Privacy Policy</a></li>
+              <li><a href="../404.html">Terms of Service</a></li>
+              <li><a href="../404.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-bottom-text">
+          &copy; 2026 Customer Support SaaS. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    // Sticky Header Scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu
+    // Newsletter Form Validation & Redirect (No popup alert)
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterEmail = document.getElementById('newsletterEmail');
+    const newsletterError = document.getElementById('newsletterError');
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const val = newsletterEmail.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!val || !emailRegex.test(val)) {
+          newsletterError.classList.add('visible');
+        } else {
+          newsletterError.classList.remove('visible');
+          window.location.href = '../404.html';
+        }
+      });
+
+      newsletterEmail.addEventListener('input', () => {
+        newsletterError.classList.remove('visible');
+      });
+    }
+
+    // Mobile Menu
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileCloseBtn.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Skill Development Hub</title>
+  <meta name="description" content="Create an account on Skill Development Hub to master tech skills, build practical projects, and work with mentors.">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../css/signup.css">
+  <!-- FontAwesome CDN for modern clean icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="auth-page">
+  <!-- Background Glow Decorations -->
+  <div class="auth-glow-orb auth-glow-1"></div>
+  <div class="auth-glow-orb auth-glow-2"></div>
+
+  <!-- Main Signup Card Section -->
+  <main class="auth-main">
+    <div class="auth-card signup-card" id="signupCard">
+      <!-- Card Top Header Row -->
+      <div class="auth-card-top-bar">
+        <a href="../index.html" class="logo-brand">
+          <img src="../assets/logo_trimmed.webp" alt="Skill Development Hub Logo" class="auth-card-logo">
+        </a>
+        <a href="../index.html" class="auth-back-link">
+          <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+
+      <div class="auth-header">
+        <span class="auth-badge"><i class="fa-solid fa-user-plus"></i> Join Us</span>
+        <h1 class="auth-title">Create your account</h1>
+        <p class="auth-subtitle">Start building skills and real-world projects today</p>
+      </div>
+
+      <!-- Signup Form -->
+      <form class="auth-form" id="signupForm" novalidate>
+        <!-- Email Input -->
+        <div class="form-group" id="emailGroup">
+          <label class="form-label" for="emailInput">Email Address</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input 
+              type="email" 
+              id="emailInput" 
+              class="form-input" 
+              placeholder="name@example.com"
+              autocomplete="off"
+              required
+            >
+          </div>
+          <span class="input-error-msg" id="emailError">Valid email address is required</span>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group" id="passwordGroup">
+          <label class="form-label" for="passwordInput">Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input 
+              type="password" 
+              id="passwordInput" 
+              class="form-input" 
+              placeholder="At least 6 characters"
+              autocomplete="off"
+              required
+            >
+            <button type="button" class="password-toggle-btn" id="passwordToggleBtn" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye" id="passwordToggleIcon"></i>
+            </button>
+          </div>
+          <span class="input-error-msg" id="passwordError">Password must be at least 6 characters</span>
+        </div>
+
+        <!-- Confirm Password Input -->
+        <div class="form-group" id="confirmPasswordGroup">
+          <label class="form-label" for="confirmPasswordInput">Confirm Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-shield-halved input-icon"></i>
+            <input 
+              type="password" 
+              id="confirmPasswordInput" 
+              class="form-input" 
+              placeholder="Re-enter password"
+              autocomplete="off"
+              required
+            >
+            <button type="button" class="password-toggle-btn" id="confirmPasswordToggleBtn" aria-label="Toggle confirm password visibility">
+              <i class="fa-regular fa-eye" id="confirmPasswordToggleIcon"></i>
+            </button>
+          </div>
+          <span class="input-error-msg" id="confirmPasswordError">Passwords do not match</span>
+        </div>
+
+        <!-- Custom Role Dropdown (DIV/SPAN based - NO SELECT) -->
+        <div class="form-group" id="roleGroup">
+          <label class="form-label">Account Role</label>
+          <div class="custom-dropdown-container" id="customRoleDropdown">
+            <div 
+              class="custom-dropdown-trigger" 
+              id="dropdownTrigger" 
+              tabindex="0"
+              role="combobox"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-label="Select Account Role"
+            >
+              <i class="fa-solid fa-user-gear input-icon"></i>
+              <span class="dropdown-selected-text placeholder" id="selectedRoleText">Select Role...</span>
+              <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+            </div>
+
+            <div class="custom-dropdown-menu" id="dropdownMenu" role="listbox">
+              <div class="dropdown-option" data-value="User" role="option" tabindex="0">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>User (Learner)</span>
+              </div>
+              <div class="dropdown-option" data-value="Admin" role="option" tabindex="0">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Admin (Manager)</span>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" id="roleHiddenInput" name="role" value="">
+          <span class="input-error-msg" id="roleError">Please select an account role</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-submit-btn" id="signupSubmitBtn">
+          <span>Create Account</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <!-- Footer Link -->
+      <div class="auth-card-footer">
+        Already have an account?
+        <a href="login.html" class="auth-switch-link">Sign In</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="auth-simple-footer">
+    <div class="container">
+      &copy; 2026 Skill Development Hub. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Interactivity & Validation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // GSAP Entrance Animation
+      if (window.gsap) {
+        gsap.from('#signupCard', {
+          duration: 0.8,
+          y: 40,
+          opacity: 0,
+          ease: 'power3.out'
+        });
+      }
+
+      // Form Elements
+      const signupForm = document.getElementById('signupForm');
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+
+      const passwordToggleBtn = document.getElementById('passwordToggleBtn');
+      const passwordToggleIcon = document.getElementById('passwordToggleIcon');
+      const confirmPasswordToggleBtn = document.getElementById('confirmPasswordToggleBtn');
+      const confirmPasswordToggleIcon = document.getElementById('confirmPasswordToggleIcon');
+
+      const customRoleDropdown = document.getElementById('customRoleDropdown');
+      const dropdownTrigger = document.getElementById('dropdownTrigger');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      const selectedRoleText = document.getElementById('selectedRoleText');
+      const roleHiddenInput = document.getElementById('roleHiddenInput');
+      const dropdownOptions = document.querySelectorAll('.dropdown-option');
+
+      const emailGroup = document.getElementById('emailGroup');
+      const passwordGroup = document.getElementById('passwordGroup');
+      const confirmPasswordGroup = document.getElementById('confirmPasswordGroup');
+      const roleGroup = document.getElementById('roleGroup');
+
+      // Password Eye Reveal Toggles
+      passwordToggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        passwordToggleIcon.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+      });
+
+      confirmPasswordToggleBtn.addEventListener('click', () => {
+        const isPassword = confirmPasswordInput.type === 'password';
+        confirmPasswordInput.type = isPassword ? 'text' : 'password';
+        confirmPasswordToggleIcon.className = isPassword ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+      });
+
+      // Custom Dropdown Open/Close Logic
+      function openDropdown() {
+        customRoleDropdown.classList.add('open');
+        dropdownTrigger.setAttribute('aria-expanded', 'true');
+        if (window.gsap) {
+          gsap.to(dropdownMenu, { duration: 0.25, display: 'flex', opacity: 1, y: 0, ease: 'power2.out' });
+        } else {
+          dropdownMenu.style.display = 'flex';
+          dropdownMenu.style.opacity = '1';
+        }
+      }
+
+      function closeDropdown() {
+        customRoleDropdown.classList.remove('open');
+        dropdownTrigger.setAttribute('aria-expanded', 'false');
+        if (window.gsap) {
+          gsap.to(dropdownMenu, { 
+            duration: 0.2, 
+            opacity: 0, 
+            y: -8, 
+            ease: 'power2.in',
+            onComplete: () => { dropdownMenu.style.display = 'none'; }
+          });
+        } else {
+          dropdownMenu.style.display = 'none';
+        }
+      }
+
+      dropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = customRoleDropdown.classList.contains('open');
+        isOpen ? closeDropdown() : openDropdown();
+      });
+
+      dropdownTrigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          openDropdown();
+          if (dropdownOptions.length > 0) dropdownOptions[0].focus();
+        }
+      });
+
+      // Option Selection
+      dropdownOptions.forEach(option => {
+        const selectOption = () => {
+          const val = option.getAttribute('data-value');
+          const labelText = option.querySelector('span').textContent;
+
+          roleHiddenInput.value = val;
+          selectedRoleText.textContent = labelText;
+          selectedRoleText.classList.remove('placeholder');
+
+          dropdownOptions.forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+
+          roleGroup.classList.remove('has-error');
+          closeDropdown();
+          dropdownTrigger.focus();
+        };
+
+        option.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectOption();
+        });
+
+        option.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectOption();
+          } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const next = option.nextElementSibling;
+            if (next) next.focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const prev = option.previousElementSibling;
+            if (prev) prev.focus();
+          }
+        });
+      });
+
+      // Close dropdown on outside click or Escape
+      document.addEventListener('click', (e) => {
+        if (!customRoleDropdown.contains(e.target)) {
+          closeDropdown();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && customRoleDropdown.classList.contains('open')) {
+          closeDropdown();
+          dropdownTrigger.focus();
+        }
+      });
+
+      // Email Format Check
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // Input Reset Error on typing
+      emailInput.addEventListener('input', () => emailGroup.classList.remove('has-error'));
+      passwordInput.addEventListener('input', () => passwordGroup.classList.remove('has-error'));
+      confirmPasswordInput.addEventListener('input', () => confirmPasswordGroup.classList.remove('has-error'));
+
+      // Form Submit & Validation
+      signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+        const emailVal = emailInput.value.trim();
+        const passwordVal = passwordInput.value.trim();
+        const confirmPasswordVal = confirmPasswordInput.value.trim();
+        const roleVal = roleHiddenInput.value;
+
+        // Email validation
+        if (!emailVal || !isValidEmail(emailVal)) {
+          emailGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          emailGroup.classList.remove('has-error');
+        }
+
+        // Password validation (minimum 6 chars)
+        if (!passwordVal || passwordVal.length < 6) {
+          passwordGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          passwordGroup.classList.remove('has-error');
+        }
+
+        // Confirm Password validation
+        if (!confirmPasswordVal || confirmPasswordVal !== passwordVal) {
+          confirmPasswordGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          confirmPasswordGroup.classList.remove('has-error');
+        }
+
+        // Role validation
+        if (!roleVal) {
+          roleGroup.classList.add('has-error');
+          isValid = false;
+        } else {
+          roleGroup.classList.remove('has-error');
+        }
+
+        if (!isValid) {
+          return;
+        }
+
+        window.location.href = 'login.html';
+      });
+    });
+  </script>
+</body>
+</html>
