@@ -68,10 +68,10 @@
             Have questions about our practical skill courses, mentorship programs, or career placement? Reach out to our admissions advisors or student success team today.
           </p>
           <div class="contact-hero-actions">
-            <a href="#contact-form-section" class="btn btn-primary">
+            <a href="../404.html" class="btn btn-primary">
               Send a Message <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
             </a>
-            <a href="#support-hub" class="btn btn-outline">
+            <a href="../404.html" class="btn btn-outline">
               Browse Support Options
             </a>
           </div>
@@ -94,7 +94,7 @@
 
         <div class="contact-hero-visual reveal-scale">
           <div class="hero-image-card">
-            <img src="../woman.jpg" alt="Student receiving career guidance and advice at Skill Development Hub">
+            <img src="../assets/woman.webp" alt="Student receiving career guidance and advice at Skill Development Hub">
             
             <div class="hero-badge-float badge-float-1">
               <div class="badge-icon">
@@ -327,7 +327,7 @@
             <!-- Advisor Spotlight -->
             <div class="advisor-card">
               <div class="advisor-header">
-                <img src="../woman.jpg" alt="Senior Admissions Counselor" class="advisor-avatar">
+                <img src="../assets/woman.webp" alt="Senior Admissions Counselor" class="advisor-avatar">
                 <div class="advisor-info">
                   <h4>Sarah Jenkins</h4>
                   <span>Senior Career Advisor</span>
@@ -336,7 +336,7 @@
               <p class="advisor-quote">
                 "Our goal isn't just to enroll you in a course — it's to help you pick the path that aligns with your real-world career ambitions."
               </p>
-              <a href="services.html" class="advisor-direct-link">
+              <a href="../404.html" class="advisor-direct-link">
                 View Learning Programs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
@@ -362,7 +362,7 @@
             <span class="support-badge">Pre-Enrollment</span>
             <h3>Admissions & Fit</h3>
             <p>Unsure which path suits your current skill level? Schedule a 15-minute consultation with a technology career specialist.</p>
-            <a href="#contact-form-section" class="support-action-link">
+            <a href="../404.html" class="support-action-link">
               Schedule Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -371,7 +371,7 @@
             <span class="support-badge">Financial</span>
             <h3>Scholarships & Tuition</h3>
             <p>Explore flexible payment options, installment plans, and merit-based financial assistance for our flagship programs.</p>
-            <a href="services.html" class="support-action-link">
+            <a href="../404.html" class="support-action-link">
               Explore Tuition Plans <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -380,7 +380,7 @@
             <span class="support-badge">Placement</span>
             <h3>Career Services</h3>
             <p>Learn about our portfolio reviews, interview prep workshops, and employer referral network for graduates.</p>
-            <a href="about.html" class="support-action-link">
+            <a href="../404.html" class="support-action-link">
               Learn Career Support <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -557,17 +557,17 @@
 
         <div class="community-cards-grid">
           <!-- Discord -->
-          <a href="#" class="community-card reveal-up">
+          <a href="../404.html" class="community-card reveal-up">
             <div class="community-icon community-discord">
               <i class="fa-brands fa-discord" aria-hidden="true"></i>
             </div>
             <h3>Discord Server</h3>
-            <p>Live study channels, daily code challenges, and mentor voice rooms.</p>
+            <p>Live study channels, daily code challenges, and mentor voice.</p>
             <span class="community-count">8,500+ Active Members</span>
           </a>
 
           <!-- Slack -->
-          <a href="#" class="community-card reveal-up" style="animation-delay: 0.1s;">
+          <a href="../404.html" class="community-card reveal-up" style="animation-delay: 0.1s;">
             <div class="community-icon community-slack">
               <i class="fa-brands fa-slack" aria-hidden="true"></i>
             </div>
@@ -577,17 +577,17 @@
           </a>
 
           <!-- GitHub -->
-          <a href="#" class="community-card reveal-up" style="animation-delay: 0.2s;">
+          <a href="../404.html" class="community-card reveal-up" style="animation-delay: 0.2s;">
             <div class="community-icon community-github">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
             </div>
             <h3>GitHub Hub</h3>
-            <p>Explore open-source student projects and curriculum starter templates.</p>
+            <p>Explore open-source student projects and curriculum starter.</p>
             <span class="community-count">2,100+ Stars</span>
           </a>
 
           <!-- LinkedIn -->
-          <a href="#" class="community-card reveal-up" style="animation-delay: 0.3s;">
+          <a href="../404.html" class="community-card reveal-up" style="animation-delay: 0.3s;">
             <div class="community-icon community-linkedin">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </div>
@@ -612,11 +612,8 @@
               Take the first step toward a rewarding career in technology. Speak with an advisor today or explore our upcoming course cohorts.
             </p>
             <div class="cta-buttons">
-              <a href="services.html" class="btn btn-primary">
+              <a href="../404.html" class="btn btn-primary">
                 Explore Programs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a href="signup.html" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4);">
-                Create Account
               </a>
             </div>
           </div>
@@ -832,31 +829,7 @@
         }
 
         if (isNameValid && isEmailValid && isMessageValid && isConsentValid) {
-          // Form submission success behavior
-          const randomId = Math.floor(10000 + Math.random() * 90000);
-          if (ticketIdDisplay) {
-            ticketIdDisplay.textContent = `Ticket ID: #SKILL-${randomId}`;
-          }
-
-          // Animate transition with GSAP if present
-          if (window.gsap) {
-            gsap.to(contactForm, {
-              opacity: 0,
-              y: -10,
-              duration: 0.3,
-              onComplete: () => {
-                contactForm.style.display = 'none';
-                formSuccessCard.style.display = 'block';
-                gsap.fromTo(formSuccessCard, 
-                  { opacity: 0, y: 15 }, 
-                  { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
-                );
-              }
-            });
-          } else {
-            contactForm.style.display = 'none';
-            formSuccessCard.style.display = 'block';
-          }
+          window.location.href = '../404.html';
         }
       });
 
