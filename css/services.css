@@ -1376,6 +1376,21 @@
     }
 }
 
+@media (max-width: 320px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    .services-hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3.5rem);
+    }
+    .floating-course-card {
+        transform: scale(0.8);
+    }
+    .category-content, .program-body, .benefit-card {
+        padding: 18px 14px;
+    }
+}
+
 /* Scroll Reveal Animations System */
 .reveal-up,
 .reveal-top,

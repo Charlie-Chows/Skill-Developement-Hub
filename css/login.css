@@ -505,12 +505,14 @@ input:-webkit-autofill:active {
   }
 
   .auth-card-logo {
-    height: 34px;
-    max-width: 150px;
+    height: 32px;
+    max-width: 140px;
   }
 
   .auth-back-link {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    gap: 0.35rem;
   }
 
   .auth-title {
@@ -538,5 +540,35 @@ input:-webkit-autofill:active {
   .auth-glow-1,
   .auth-glow-2 {
     display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-main {
+    padding: 0.75rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .auth-card {
+    padding: 1.25rem 0.75rem;
+    border-radius: 1.25rem;
+  }
+
+  .auth-card-logo {
+    height: 26px;
+    max-width: 110px;
+  }
+
+  .auth-back-link {
+    font-size: 0.72rem;
+    white-space: nowrap;
+    gap: 0.25rem;
+  }
+
+  .auth-title {
+    font-size: 1.3rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.78rem;
   }
 }

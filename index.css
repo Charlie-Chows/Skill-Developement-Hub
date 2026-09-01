@@ -389,6 +389,16 @@ img[src*="logo_trimmed"] {
   50% { transform: translateY(-12px); }
 }
 
+@keyframes floatAnimMobile1 {
+  0%, 100% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -10px); }
+}
+
+@keyframes floatAnimMobile2 {
+  0%, 100% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -12px); }
+}
+
 .mission-icons-row {
   display: flex;
   gap: 0.85rem;
@@ -699,15 +709,115 @@ img[src*="logo_trimmed"] {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 860px) {
+  .hero-right {
+    width: 100%;
+    overflow: visible;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .main-title {
-    font-size: 2.35rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hero-header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .avatar-arch-container {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .colorful-arch-bg {
+    aspect-ratio: 0.88;
+    border-radius: 160px 160px 60px 60px;
+    width: 100%;
+  }
+
+  .woman-image {
+    border-radius: 160px 160px 60px 60px;
+  }
+
+  .ribbon-wrap-overlay {
+    position: absolute;
+    bottom: 22%;
+    left: 50% !important;
+    right: auto !important;
+    width: 98%;
+    max-width: 310px;
+    height: auto;
+    padding: 0.45rem 0.65rem;
+    gap: 0.4rem;
+    justify-content: center;
+    border-radius: 9999px;
+    animation: floatAnimMobile1 3.5s ease-in-out infinite !important;
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+    z-index: 3;
+  }
+
+  .ribbon-badge {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.66rem;
+    gap: 0.3rem;
+    white-space: nowrap;
+  }
+
+  .ribbon-badge i {
+    font-size: 0.72rem;
+  }
+
+  .mission-floating-card {
+    position: absolute;
+    bottom: -15px;
+    left: 50% !important;
+    right: auto !important;
+    animation: floatAnimMobile2 4s ease-in-out infinite !important;
+    margin: 0 auto;
+    width: auto;
+    max-width: 90%;
+    padding: 0.65rem 1.25rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .mission-icons-row {
+    gap: 0.45rem;
+  }
+
+  .app-badge-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    border-radius: 9px;
+  }
+
+  .mission-text {
+    font-size: 0.78rem;
   }
 
   .curriculum-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+    gap: 0.65rem;
     width: 100%;
   }
 
@@ -717,25 +827,17 @@ img[src*="logo_trimmed"] {
 
   .curriculum-img-wrapper {
     width: 100%;
-    height: 75px;
+    height: 70px;
   }
 
   .curriculum-card-title {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     text-align: center;
   }
 
   .partners-row {
     justify-content: center;
     gap: 1.25rem;
-  }
-
-  .mission-floating-card {
-    left: 50%;
-    transform: translateX(-50%);
-    animation: none;
-    bottom: -35px;
-    width: 90%;
   }
 
   .stacked-cards-container {
@@ -1634,6 +1736,52 @@ img[src*="logo_trimmed"] {
 
   .learning-card.featured {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .avatar-arch-container {
+    max-width: 285px;
+  }
+  .ribbon-wrap-overlay {
+    max-width: 275px;
+    padding: 0.35rem 0.45rem;
+  }
+  .ribbon-badge {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.6rem;
+  }
+  .mission-floating-card {
+    padding: 0.5rem 0.95rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-title {
+    font-size: 1.85rem;
+  }
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+  .curriculum-img-wrapper {
+    height: 110px;
+  }
+  .stacked-cards-container {
+    height: 240px;
+  }
+  .features-main-heading {
+    font-size: 1.5rem;
+  }
+  .avatar-arch-container {
+    max-width: 250px;
+  }
+  .ribbon-wrap-overlay {
+    max-width: 245px;
+    padding: 0.3rem 0.35rem;
+  }
+  .ribbon-badge {
+    padding: 0.2rem 0.35rem;
+    font-size: 0.55rem;
   }
 }
 

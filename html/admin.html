@@ -685,6 +685,62 @@
         white-space: nowrap;
       }
     }
+
+    @media (max-width: 360px) {
+      html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      .main-wrapper {
+        padding: 4.5rem 0.5rem 1.25rem 0.5rem !important;
+        overflow-x: hidden;
+      }
+      .mobile-dash-header {
+        padding: 0 0.5rem;
+      }
+      .top-bar {
+        padding: 0.85rem 0.6rem;
+        border-radius: 0.85rem;
+      }
+      .greeting-title {
+        font-size: 1.1rem;
+      }
+      .system-status-chip {
+        font-size: 0.68rem;
+        padding: 0.2rem 0.45rem;
+      }
+      .user-profile-chip {
+        padding: 0.2rem 0.4rem 0.2rem 0.25rem;
+      }
+      .user-email-label {
+        max-width: 85px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .metric-card {
+        padding: 0.85rem 0.6rem;
+      }
+      .metric-val {
+        font-size: 1.35rem;
+      }
+      .card-panel {
+        padding: 0.85rem 0.6rem;
+        border-radius: 0.85rem;
+        overflow-x: hidden;
+      }
+      canvas, .chart-container, .chart-container-donut {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .card-header-title {
+        font-size: 0.9rem;
+      }
+      .chart-container-donut {
+        max-height: 200px;
+      }
+    }
   </style>
 </head>
 <body>
