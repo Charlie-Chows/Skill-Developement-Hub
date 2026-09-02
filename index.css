@@ -190,6 +190,19 @@ img[src*="logo_trimmed"] {
   color: #090d16;
 }
 
+[animate] .line {
+  overflow: hidden;
+  display: block;
+}
+
+[animate] .word {
+  display: inline-block;
+}
+
+[animate] .char {
+  display: inline-block;
+}
+
 /* Curriculum Row Section */
 .curriculum-section {
   margin-top: 0.5rem;

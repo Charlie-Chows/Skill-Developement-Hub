@@ -56,7 +56,7 @@
         <!-- Left Section: Headline, Enroll Button, Curriculum & Brand Logos -->
         <div class="hero-left reveal-left">
           <div class="hero-header-box reveal-top">
-            <h1 class="main-title">Skill Development Center</h1>
+            <h1 class="main-title" animate>Skill Development Center</h1>
             <a href="404.html" class="btn btn-primary">Enroll Now</a>
           </div>
 
@@ -895,6 +895,29 @@
 
       startStoryAutoSlide();
     }
+  </script>
+
+  <!-- SplitType & GSAP Text Character Animation -->
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof SplitType !== 'undefined' && typeof gsap !== 'undefined') {
+        let typeSplit = new SplitType('[animate]', {
+          types: 'lines, words, chars',
+          tagName: 'span'
+        });
+
+        gsap.from('[animate] .char', {
+          y: '100%',
+          opacity: 0,
+          duration: 0.8,
+          ease: 'elastic.out(1, 0.75)',
+          stagger: 0.04
+        });
+      }
+    });
   </script>
 </body>
 </html>
